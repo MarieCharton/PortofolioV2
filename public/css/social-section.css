@@ -7,6 +7,7 @@
     margin: 5% auto 0;
 }
 .social-wrapper p{
+    font-size: 1vw;
     font-weight: bold;
 }
 .social-box{
@@ -44,6 +45,6 @@
   margin: 0px -1px 0px -1px; 
 }
 .social-artwork{
-    padding-top: 10%;
+    padding-top: 30%;
     width: 100%;
 }

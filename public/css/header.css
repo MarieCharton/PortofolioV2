@@ -64,8 +64,14 @@
 .marie{
     /* background-color: blue; */
     position: absolute;
-    left: 30%;
-    top:17%;
+    left: 33%;
+    top:22%;
+}
+.img-marie{
+    width:20%;
+    height: 20%;
+    clip-path:ellipse(50% 50%);
+    margin: auto;
 }
 .banner-presentation{
     /* background-color: red; */
@@ -89,11 +95,5 @@
 .img-banner{
     width: 100%;
     border-radius: 50px;
-}
-.img-marie{
-    width:25%;
-    height: 25%;
-    clip-path:ellipse(50% 50%);
-    margin: auto;
 }
 /*=END HEADER=*/
