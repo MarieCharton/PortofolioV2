@@ -1,0 +1,49 @@
+/*SOCIAL PART */
+
+.social-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 5% auto 0;
+}
+.social-wrapper p{
+    font-weight: bold;
+}
+.social-box{
+    background-color:  #ec7106;
+    height: auto;
+    width: 40%;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+    color:  #2d0a58;
+}
+
+.social-image-box{
+    width: 30%;
+    margin: auto;
+}
+.social-image{
+    width: 100%;
+}
+.social-image:hover {
+    transform: scale(1.1);
+}
+.solo-social{
+    width: 50%;
+}
+.social-box-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hashtag{
+    font-style: italic;
+}
+/*ARTWORK*/
+.banner-social{
+  width: 20%;
+  margin: 0px -1px 0px -1px; 
+}
+.social-artwork{
+    padding-top: 10%;
+    width: 100%;
+}

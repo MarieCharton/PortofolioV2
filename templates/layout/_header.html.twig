@@ -1,6 +1,6 @@
 <div class="nav-bar">
     <div class="logo">
-        <img class = "logo-image" src="{{ asset('images/logo/logo.png') }}" alt="logo-fais-tes-devoirs">
+        <a href="{{ path('homepage') }}"><img title="Retour a l'accueil" class = "logo-image" src="{{ asset('images/logo/logo.png') }}" alt="logo-fais-tes-devoirs"></a>
     </div>
     <nav class="links">
     <p><i class="fas fa-code fa-2x"></i></p>
@@ -13,7 +13,9 @@
     </ul>
     <p><i class="fas fa-code fa-2x "></i></p>
     </nav>
-    <img class = "book" src="{{ asset('images/book.png') }}" alt="books">
+    <div class="book">
+        <img class = "book-image" src="{{ asset('images/book.png') }}" alt="books">
+    </div>
 </div>
 
 <div class="banner">

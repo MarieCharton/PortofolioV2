@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>{% block title %}Fait tes <dev>oirs!{% endblock %}</title>
         {% block stylesheets %}
 
@@ -22,7 +24,16 @@
         {% endblock %}
     </head>
     <body>
+
+        {# Bouton Scroll to top  #}
+        <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><i class="fas fa-arrow-circle-up fa-3x"></i></button>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}
+        {# Javascript #}
+        <script src="{{ asset('js/app.js') }}"></script>
+
+        {% endblock %}
     </body>
 </html>

@@ -1,0 +1,22 @@
+/*TECHNO PART */
+.banner-techno{
+    margin-bottom: -30px;
+    text-align: center;
+}
+.section-title{
+    color: white;
+    font-size: 2em;
+    padding-top: 10px;
+}
+.techno-logo{
+    width: 25%;
+}
+.invert{  
+    filter: invert(100%); 
+}
+.git {
+    width: 8%;
+}
+.image-techno{
+    padding: 20px;
+}

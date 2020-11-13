@@ -1,0 +1,39 @@
+@media (min-width: 300px) and (max-width: 599px) {
+    body{
+        background-color: blue;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body{
+        /* background-color: red; */
+    }
+    .banner-presentation h1{
+        transform: rotate(0deg);
+        padding-left: 0px;
+    }
+    .img-marie{
+        width:10%;
+        height: 10%;
+        clip-path:ellipse(50% 50%);
+        margin: auto;
+    }
+    .marie{
+        /* background-color: blue; */
+        position: absolute;
+        left: 32%;
+        top:4%;
+    }
+    .intro-techno {
+        width: 30%;
+    }
+
+    .box {
+        width: 20%;
+        height: 150px;
+    }
+    .see-all-button{
+        margin-top: 15px;
+        border-radius: 10px 10px 10px 10px;
+    }
+}

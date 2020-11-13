@@ -1,0 +1,9 @@
+/*FOOTER*/
+.footer{
+    background-color: #2d0a58 ;
+    color: #ec7106 ;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    /* margin-bottom: -10; */
+}

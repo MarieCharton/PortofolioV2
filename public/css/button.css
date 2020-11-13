@@ -1,0 +1,82 @@
+/*SCROLL BUTTON*/
+#scroll-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+}
+.fa-arrow-circle-up:before {
+    color: #2d0a58;
+    background-color: white;
+}
+
+/*BASIC BUTTON*/
+.button-round{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1vw;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    color: white;
+
+}
+.see-all{
+    text-align: center;
+
+}
+.see-all-button{
+    font-size: 1.4vw;
+    border-radius: 0px 0px 30px 30px;
+    transition: 0.4s;
+}
+
+/*ORANGE BUTTON*/
+.orange-button{
+    background-color: #ec7106;
+}
+
+.orange-button:hover{
+    border: 3px solid  #ec7106;
+    background-color: #2d0a58;
+    color:  #ec7106;
+}
+
+/*VIOLET BUTTON*/
+.violet-button{
+    background-color: #2d0a58;
+}
+
+.violet-button:hover{
+    border: 3px solid  #2d0a58;
+    background-color: #ec7106;
+    color:  #2d0a58;
+}
+
+/* BUTTON SEE ALL VIOLET */
+.see-all-button-violet{
+    background-color: #2d0a58;
+    color: white;
+}
+.see-all-button-violet:hover{
+    background-color: #ec7106;
+}
+
+/* BUTTON SEE ALL ORANGE */
+.see-all-button-orange{
+    background-color: #ec7106;
+    color: white;
+}
+.see-all-button-orange:hover{
+    background-color: #2d0a58;
+}
