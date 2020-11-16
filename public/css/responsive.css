@@ -163,9 +163,40 @@
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
+    /*=NAVBAR=*/
+    .nav-bar{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        z-index: +3;
+    }
+    .logo{
+        width: 30%;
+        margin:auto 0 auto 0;
+    }
+    .logo-image{
+        width: 100%;
+    }
+    .book{
+        width: 15%;
+        margin:auto 0 -5px 0;
+    }
+    .links{
+        width:65%;
+        text-align: center;
+    }
+    .links ul  li a{
+        font-size: 25px;
+    }
+
+    /*BANNER*/
     .banner-presentation h1{
         transform: rotate(0deg);
         padding-left: 0px;
+    }
+    .presentation{
+        font-size: 10px;
     }
     .img-marie{
         width:10%;
@@ -176,21 +207,41 @@
     .marie{
         position: absolute;
         left: 32%;
-        top:4%;
+        top:0%;
     }
     .intro-techno {
         width: 30%;
     }
+    .image-box{
+        height:80px;
+    }
 
     .box {
         width: 20%;
-        height: 150px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     .see-all-button{
-        margin-top: 15px;
+        margin-top: -4px;
         border-radius: 10px 10px 10px 10px;
     }
     .social-wrapper .fas {
         display: none;
+    }
+    .social-image-box {
+        width: 50%;
+    }
+    .section h3{
+        font-size: 0.8em;
+    }
+    /*SCROLL BUTTON*/
+    #scroll-to-top-button {
+        right: -114px;
+        bottom: 60px;
+    }
+    .arrow-top{
+        width: 25%;
     }
 }
