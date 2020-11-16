@@ -6,27 +6,35 @@
         top: 0px;
         background-color: white;
         z-index: +3;
+
     }
     .fa-code:before {
       display: none;
     }
     .logo{
-        width: 20%;
-        margin:auto 0 auto 0;
+        width: 50%;
+        /* background-color: red; */
     }
     .logo-image{
         width: 100%;
     }
     .book{
-        width: 15%;
-        margin:auto 0 auto 0;
+        /* width: 15%;
+        margin:auto 0 auto 0; */
+        display: none;
     }
     .links{
-        width:65%;
+        width: 50%;
         text-align: center;
+        /* background-color: green; */
+
+    }
+    .link {
+        display: block;
     }
     .links ul  li a{
-        font-size: 1em;
+        font-size: 16px;
+        padding: 0px;
     }
     /*=Banner=*/
     .banner{
@@ -135,6 +143,7 @@
     }
     .see-all-button{
         font-size: 15px;
+        margin-top: -10px;
     }
     .social-wrapper .fas {
         display: none;
@@ -244,4 +253,38 @@
     .arrow-top{
         width: 25%;
     }
+
+
+
+    /*Title*/
+    .section-title{
+        font-size: 23px;
+    }
+    /*Techno*/
+    .intro-techno{
+        width: 80%;
+    }
+    .banner-techno{
+        margin-top: 20px;
+        margin-bottom: -23px;
+    }
+
+    /*Project*/
+    .intro-project{
+        width: 80%;
+    }
+    .banner-project{
+        margin-top: 30px;
+        margin-bottom: -26px;
+    }
+
+    /*Training*/
+    .intro-training{
+        width: 80%;
+    }
+    .banner-training{
+        margin-top: 30px;
+        margin-bottom: -24px ;
+    }
+
 }
