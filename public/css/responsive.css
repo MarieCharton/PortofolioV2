@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 599px) {
+@media (min-width: 0px) and (max-width: 599px) {
     /*=NAVBAR=*/
     .nav-bar{
         position: -webkit-sticky;
