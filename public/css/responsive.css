@@ -1,7 +1,4 @@
 @media (min-width: 300px) and (max-width: 599px) {
-    body{
-        /* background-color: blue; */
-    }
     /*=NAVBAR=*/
     .nav-bar{
         position: -webkit-sticky;
@@ -35,11 +32,9 @@
     .banner{
         padding: 0px;
         width: 100%;
-        /* padding-bottom: 20px; */
         display: inline;
     }
     .banner-presentation{
-        /* background-color: green; */
         width: 80%;
         text-align: center;
         margin: auto;
@@ -53,16 +48,19 @@
         font-size: 15px;
         width: 100%;
         padding-left: 0px;
-        /* background-color: red; */
+     
     }
     .banner-div{
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
     .img-banner{
+        border-radius: 0px;
+        margin-bottom: 40px;
     }
     .marie{
-        display: none;
+        position: static;
+        text-align: center;
     }
 
     /*Title*/
@@ -71,21 +69,55 @@
     }
     /*Techno*/
     .intro-techno{
-        width: 70%;
+        width: 80%;
     }
     .banner-techno{
+        margin-top: 20px;
         margin-bottom: -23px;
     }
 
     /*Project*/
     .intro-project{
-        width: 40%;
+        width: 80%;
     }
     .banner-project{
+        margin-top: 30px;
         margin-bottom: -26px;
     }
 
+    /*Training*/
+    .intro-training{
+        width: 80%;
+    }
+    .banner-training{
+        margin-top: 30px;
+        margin-bottom: -24px ;
+    }
+
+    /*Social*/
+    .social-wrapper {
+        width: 100%;
+        display: inline;
+    }
+    .social-box{
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        margin:auto;
+    }
+    .banner-social{
+        width: 70%;
+        margin: -84px auto -25px auto;
+    }
+    .social-image-box{
+        width: 60%;
+    }
+    .social-wrapper p{
+        font-size: 20px;
+    }
     /*Section de base*/
+    .section{
+        width: 100%;       
+    }
 
     /*BOX*/
     .last-three{
@@ -104,12 +136,33 @@
     .see-all-button{
         font-size: 15px;
     }
+    .social-wrapper .fas {
+        display: none;
+    }
+    .hashtag{
+        display: none;
+    }
+    /*SCROLL BUTTON*/
+    #scroll-to-top-button {
+        bottom: 30px;
+        right: -130px;
+    }
+    .arrow-top{
+        width: 15%;
+    }
+
+    /*Footer*/
+    .footer{
+        display: block;
+        height: 100px;
+        text-align: center;
+    }
+    .footer p {
+        font-size: 0.8em;
+    } 
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
-    body{
-        /* background-color: red; */
-    }
     .banner-presentation h1{
         transform: rotate(0deg);
         padding-left: 0px;
@@ -121,7 +174,6 @@
         margin: auto;
     }
     .marie{
-        /* background-color: blue; */
         position: absolute;
         left: 32%;
         top:4%;

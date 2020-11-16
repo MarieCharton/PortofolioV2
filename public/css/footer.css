@@ -4,6 +4,12 @@
     color: #ec7106 ;
     display: flex;
     justify-content: center;
-    height: 40px;
+    justify-content: space-around;
+    height: 60px;
+    border-top: 5px solid #ec7106;
     /* margin-bottom: -10; */
+}
+.footer p a {
+    color: #ec7106 ;
+    text-decoration: none;
 }

@@ -3,19 +3,16 @@
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: -80px;
     z-index: 99;
-    font-size: 18px;
     border: none;
     outline: none;
     background-color: transparent;
-    color: white;
     cursor: pointer;
 
 }
-.fa-arrow-circle-up:before {
-    color: #2d0a58;
-    background-color: white;
+.arrow-top{
+    width: 30%;
 }
 
 /*BASIC BUTTON*/
