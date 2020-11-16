@@ -62,7 +62,6 @@
     border-bottom: 5px solid #2d0a58;
 }
 .marie{
-    /* background-color: blue; */
     position: absolute;
     left: 33%;
     top:22%;
@@ -74,7 +73,6 @@
     margin: auto;
 }
 .banner-presentation{
-    /* background-color: red; */
     width: 40%;
     text-align: center;
     color: #2d0a58;

@@ -1,6 +1,108 @@
 @media (min-width: 300px) and (max-width: 599px) {
     body{
-        background-color: blue;
+        /* background-color: blue; */
+    }
+    /*=NAVBAR=*/
+    .nav-bar{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        z-index: +3;
+    }
+    .fa-code:before {
+      display: none;
+    }
+    .logo{
+        width: 20%;
+        margin:auto 0 auto 0;
+    }
+    .logo-image{
+        width: 100%;
+    }
+    .book{
+        width: 15%;
+        margin:auto 0 auto 0;
+    }
+    .links{
+        width:65%;
+        text-align: center;
+    }
+    .links ul  li a{
+        font-size: 1em;
+    }
+    /*=Banner=*/
+    .banner{
+        padding: 0px;
+        width: 100%;
+        /* padding-bottom: 20px; */
+        display: inline;
+    }
+    .banner-presentation{
+        /* background-color: green; */
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    .banner-presentation h1{
+        font-size: 13px;
+        transform: rotate(0deg);
+        padding-left: 0px;
+    }
+    .presentation{
+        font-size: 15px;
+        width: 100%;
+        padding-left: 0px;
+        /* background-color: red; */
+    }
+    .banner-div{
+        width: 80%;
+        margin: auto;
+    }
+    .img-banner{
+    }
+    .marie{
+        display: none;
+    }
+
+    /*Title*/
+    .section-title{
+        font-size: 23px;
+    }
+    /*Techno*/
+    .intro-techno{
+        width: 70%;
+    }
+    .banner-techno{
+        margin-bottom: -23px;
+    }
+
+    /*Project*/
+    .intro-project{
+        width: 40%;
+    }
+    .banner-project{
+        margin-bottom: -26px;
+    }
+
+    /*Section de base*/
+
+    /*BOX*/
+    .last-three{
+        display: inline;
+    }
+    .box{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    /*BASIC BUTTON*/
+    .button-round{
+        font-size: 13px;
+    }
+    .see-all-button{
+        font-size: 15px;
     }
 }
 
