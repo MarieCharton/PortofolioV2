@@ -22,7 +22,7 @@
 /*=NAVBAR=*/
 .nav-bar{
     border-bottom: 5px solid #2d0a58;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     display: flex;
     width: 100%;
 }

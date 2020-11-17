@@ -1,0 +1,71 @@
+.wrapper-portofolio{
+    background-image: url("../../images/background/portofolio.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 65%;
+    height: 900px;
+    margin-top: 1%;
+}
+
+
+/*=====ANIMATION TITLE====*/
+/* SOURCE : https://codepen.io/realjameal/pen/jPxXGY*/
+
+.box-title{
+  width: 300px;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: #2d0a58; /* gold */
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 5px, 0 100%, 0% 5px;
+  background-position: top center, top center, bottom center;
+  -webkit-animation: drawBorderFromCenter 4s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+    0% {background-size: 0 2px, 0 0, 100% 100%;}
+    20% { background-size: 100% 2px, 100% 0, 100% 100%;}
+    66%{background-size: 100% 2px, 100% 98%, 100% 100%;}
+    99%{background-size: 100% 2px, 100% 98%, 0 2px;}
+}
+
+.portofolio-title{
+  background: white;
+  padding: 1em;
+  text-align: center;
+  /* text-transform: uppercase; */
+}
+
+.cards{
+    /* background-color: grey; */
+    text-align: center;
+}
+.card{
+    /* background-color: red; */
+    width: 18%;
+    height: 100%;
+}
+.card-image{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.box-card-image{
+    /* background-color: blue; */
+    height: 55%;
+}
+.box-card-info{
+    border-bottom:2px solid  #2d0a58;
+    border-right:2px solid  #2d0a58;
+    border-left:2px solid  #2d0a58;
+    border-radius: 0 0 10px 10px;
+    /* background-color: green; */
+    height: 45%;
+    padding: 30px;
+}
+.box-card-info p{
+    margin: 0;
+    padding: 10px;
+}

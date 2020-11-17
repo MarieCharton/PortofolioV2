@@ -19,6 +19,7 @@ orange : #ec7106;
 
 /*PAGES*/
 @import "pages/cv.css";
+@import "pages/portofolio.css";
 
 @import "responsive.css";
 
