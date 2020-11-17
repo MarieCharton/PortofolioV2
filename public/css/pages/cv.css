@@ -1,0 +1,46 @@
+.wrapper-cv{
+    background-image: url("../../images/background/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* filter:alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity:0.5; */
+}
+
+.cv-picture{
+    text-align: center;
+}
+.download{
+    color: #ec7106;
+    font-size: 1.5em;
+}
+
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .cv-picture img{
+        width: 65%;
+    }
+    .wrapper-cv{
+        background-image: url("../../images/background/contact-tablette.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+    .cv-picture img{
+        width: 90%;
+    }
+    .wrapper-cv{
+        background-image: url("../../images/background/contact-tablette.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+
+

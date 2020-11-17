@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+<div class="wrapper-cv">
+    <div class = "cv-picture">
+        <p class ="download"><a href="{{ asset('images/CVMARIECHARTON.pdf') }}" download class = "download"><i class="fa fa-arrow-circle-down"></i>Télécharger</a></p>
+        <img class = "cv"src="{{ asset('images/CVMARIECHARTON.png') }}"alt="cv de marie charton">
+    </div>
+</div>
+
+
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

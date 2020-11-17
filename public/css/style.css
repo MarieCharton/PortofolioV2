@@ -3,22 +3,29 @@ violet: #2d0a58;
 orange : #ec7106;  
 */
 
-@import "header.css";
-@import "footer.css";
-@import "button.css";
-@import "section.css";
 
-@import "techno-section.css";
-@import "project-section.css";
-@import "training-section.css";
-@import "social-section.css";
+/*BASE*/
+@import "base/header.css";
+@import "base/footer.css";
+@import "base/button.css";
+@import "base/section.css";
+
+/*HOMEPAGE*/
+@import "homepage/techno-section.css";
+@import "homepage/project-section.css";
+@import "homepage/training-section.css";
+@import "homepage/social-section.css";
+
+
+/*PAGES*/
+@import "pages/cv.css";
 
 @import "responsive.css";
-
 
 :root {
     font-family: 'Quicksand', sans-serif;
 }
+
 body{
     margin: 0;
 }

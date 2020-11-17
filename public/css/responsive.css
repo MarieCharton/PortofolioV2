@@ -1,3 +1,5 @@
+
+/*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
     /*=NAVBAR=*/
     .nav-bar{
@@ -169,8 +171,10 @@
     .footer p {
         font-size: 0.8em;
     } 
+
 }
 
+/*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
     /*=NAVBAR=*/
     .nav-bar{
@@ -262,11 +266,13 @@
     }
     /*Techno*/
     .intro-techno{
-        width: 80%;
+        width: 100%;
     }
     .banner-techno{
+        margin: auto;
         margin-top: 20px;
-        margin-bottom: -23px;
+        margin-bottom: -29px;
+        width: 50%;
     }
 
     /*Project*/
@@ -274,8 +280,10 @@
         width: 80%;
     }
     .banner-project{
-        margin-top: 30px;
-        margin-bottom: -26px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: -29px;
+        width: 50%;
     }
 
     /*Training*/
@@ -283,8 +291,11 @@
         width: 80%;
     }
     .banner-training{
-        margin-top: 30px;
-        margin-bottom: -24px ;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: -29px;
+        width: 50%;
     }
+
 
 }
