@@ -11,6 +11,7 @@
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
     .training-background{
+        background-size: 90%;
         height: 300px;
     }
 }
@@ -18,7 +19,7 @@
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
     .training-background{
-        background-size: 100%;
+        background-size: 110%;
         height: 180px;
     }
 }
