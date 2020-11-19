@@ -11,14 +11,14 @@
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
-    .portofolio-background img{
+    /* .portofolio-background img{
         width: 60%;
-    }
+    } */
 }
 
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
-    .portofolio-background img{
+    /* .portofolio-background img{
         width: 70%;
-    }
+    } */
 }
