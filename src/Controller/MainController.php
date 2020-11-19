@@ -52,24 +52,24 @@ class MainController extends AbstractController
     public function contactPage(MailerInterface $mailer)
     {
 
-        if(isset($_POST) && isset($_POST['submit'])) {
+        // if(isset($_POST) && isset($_POST['submit'])) {
  
-            $email = (new Email())
-                ->from($_POST['email'])
-                ->to('mariecharton21@gmail.com')
-                ->subject('Message de ' .$_POST['name'])
-                ->html
-                (
-                "<p><strong> Contenu du message : </strong> " . $_POST['message']. "</p>
-                <p> Adresse mail de l'expediteur : " . $_POST['email'] . "</p>"
-                );                
-            $mailer->send($email);
+        //     $email = (new Email())
+        //         ->from($_POST['email'])
+        //         ->to('mariecharton21@gmail.com')
+        //         ->subject('Message de ' .$_POST['name'])
+        //         ->html
+        //         (
+        //         "<p><strong> Contenu du message : </strong> " . $_POST['message']. "</p>
+        //         <p> Adresse mail de l'expediteur : " . $_POST['email'] . "</p>"
+        //         );                
+        //     $mailer->send($email);
             
-            // $this->addFlash('success', "Votre message a bien été envoyé ! ");
-            return $this->redirectToRoute('contact');
+        //     // $this->addFlash('success', "Votre message a bien été envoyé ! ");
+        //     return $this->redirectToRoute('contact');
             
     
-        }  
+        // }  
 
         return $this->render('contact.html.twig');
     }
