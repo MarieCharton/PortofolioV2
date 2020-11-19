@@ -1,22 +1,26 @@
+
 .training-background{
+    background-image: url("../../images/background/training.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 65%;
+    height: 580px;
     background-color: rgb(226, 221, 221);
     border-bottom: 5px solid #ea8342;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin: auto;
-}
-.training-background img{
-    width: 100%;
-    margin-top: 10px;
 }
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
-
+    .training-background{
+        background-size: 60%;
+        height: 300px;
+    }
 }
 
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
-
+    .training-background{
+        background-size: 70%;
+        height: 180px;
+    }
 }
