@@ -3,22 +3,25 @@
     border-bottom: 5px solid #ea8342;
     display: flex;
     justify-content: center;
+    width: 50%;
+    margin: auto;
 }
 .portofolio-background img{
-    width: 50%;
     margin-top: 10px;
+    width: 100%;
+
 }
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
-    /* .portofolio-background img{
+    .portofolio-background {
         width: 60%;
-    } */
+    }
 }
 
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
-    /* .portofolio-background img{
+    .portofolio-background {
         width: 70%;
-    } */
+    }
 }

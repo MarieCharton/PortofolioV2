@@ -3,22 +3,24 @@
     border-bottom: 5px solid #ea8342;
     display: flex;
     justify-content: center;
+    width: 50%;
+    margin: auto;
 }
 .training-background img{
-    width: 50%;
+    width: 100%;
     margin-top: 10px;
 }
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
-    .training-background img{
+    .training-background {
         width: 60%;
     }
 }
 
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
-    .training-background img{
+    .training-background {
         width: 70%;
     }
 }
