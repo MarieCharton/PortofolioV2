@@ -3,13 +3,11 @@
     border-bottom: 5px solid #ea8342;
     display: flex;
     justify-content: center;
-    width: 50%;
     margin: auto;
-    height: auto;
 }
 .portofolio-background img{
     margin-top: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 /*=====TABLETTE=====*/
