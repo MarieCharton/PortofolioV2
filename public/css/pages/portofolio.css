@@ -10,21 +10,16 @@
 .portofolio-background img{
     margin-top: 10px;
     width: 100%;
-
 }
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
-    .portofolio-background {
-        width: 60%;
-    }
+
 }
 
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
-    .portofolio-background {
-        width: 100%;
-    }
+
 }
 
 /* .portofolio-background{
