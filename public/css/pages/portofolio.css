@@ -5,6 +5,7 @@
     justify-content: center;
     width: 50%;
     margin: auto;
+    height: auto;
 }
 .portofolio-background img{
     margin-top: 10px;
@@ -22,6 +23,32 @@
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
     .portofolio-background {
-        width: 70%;
+        width: 100%;
     }
 }
+
+/* .portofolio-background{
+    background-image: url("../../images/background/portofolio.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 65%;
+    height: 580px;
+    background-color: rgb(226, 221, 221);
+    border-bottom: 5px solid #ea8342;
+} */
+
+/*=====TABLETTE=====*/
+/* @media (min-width: 600px) and (max-width: 1024px) {
+    .portofolio-background{
+        background-size: 90%;
+        height: 300px;
+    }
+} */
+
+/*=====MOBILE=====*/
+/* @media (min-width: 0px) and (max-width: 599px) {
+    .portofolio-background{
+        background-size: 110%;
+        height: 180px;
+    }
+} */
