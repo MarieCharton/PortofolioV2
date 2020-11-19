@@ -24,6 +24,7 @@ orange : #ec7106;
 @import "pages/portofolio.css";
 @import "pages/training.css";
 @import "pages/blog.css";
+@import "pages/contact.css";
 
 @import "responsive.css";
 
@@ -42,7 +43,11 @@ button{
     text-align: center;
     font-size: 2em;
 }
-
+@media (max-width: 599px) and (min-width: 0px){
+    .mentions {
+        font-size: 1.2em;
+    }
+}
 
 
 
