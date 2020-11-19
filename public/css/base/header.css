@@ -54,44 +54,34 @@
 
 /*=Banner=*/
 .banner{
-    padding: 20px;
     height: auto;
     display: flex;
-    flex-direction: wrap;
-    position: relative;
     border-bottom: 5px solid #2d0a58;
+    margin-bottom: 20px;
 }
-.marie{
-    position: absolute;
-    left: 33%;
-    top:22%;
-}
-.img-marie{
-    width:20%;
-    height: 20%;
-    clip-path:ellipse(50% 50%);
-    margin: auto;
-}
+
 .banner-presentation{
     width: 40%;
     text-align: center;
     color: #2d0a58;
+    font-size: 1.4vw;
+}
+.presentation{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
 }
 .banner-presentation h1{
     font-size: 2vw;
-    transform: rotate(-9deg);
-    padding-left: 367px;
 }
-.presentation{
-    width: 70%;
-    font-size: 1.2vw;
-    padding-left: 30px;
-}
+
 .banner-div{
-    width: 50%;
+    width: 60%;
+    display: flex;
+    align-items: flex-end ;
 }
 .img-banner{
     width: 100%;
-    border-radius: 50px;
+
 }
 /*=END HEADER=*/

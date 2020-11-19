@@ -15,7 +15,6 @@
     }
     .logo{
         width: 50%;
-        /* background-color: red; */
     }
     .logo-image{
         width: 100%;
@@ -28,7 +27,6 @@
     .links{
         width: 50%;
         text-align: center;
-        /* background-color: green; */
 
     }
     .link {
@@ -50,28 +48,19 @@
         margin: auto;
     }
     .banner-presentation h1{
-        font-size: 13px;
-        transform: rotate(0deg);
-        padding-left: 0px;
+        font-size: 20px;
     }
     .presentation{
-        font-size: 15px;
+        font-size: 16px;
         width: 100%;
-        padding-left: 0px;
-     
+        
     }
     .banner-div{
         width: 100%;
         margin: auto;
     }
-    .img-banner{
-        border-radius: 0px;
-        margin-bottom: 40px;
-    }
-    .marie{
-        position: static;
-        text-align: center;
-    }
+
+   
 
     /*Title*/
     .section-title{
@@ -204,27 +193,20 @@
     }
 
     /*BANNER*/
-    .banner-presentation h1{
-        transform: rotate(0deg);
-        padding-left: 0px;
-    }
-    .presentation{
-        font-size: 10px;
-    }
-    .img-marie{
-        width:10%;
-        height: 10%;
-        clip-path:ellipse(50% 50%);
+    .banner-presentation{
         margin: auto;
     }
-    .marie{
-        position: absolute;
-        left: 32%;
-        top:0%;
+    .banner-presentation h1{
+        font-size: 23px;
+        margin-bottom: 0;
     }
-    .intro-techno {
-        width: 30%;
+    .presentation{
+        font-size: 1.5vw;
+        width: 90%;
     }
+
+    
+
     .image-box{
         height:80px;
     }
@@ -257,8 +239,6 @@
     .arrow-top{
         width: 25%;
     }
-
-
 
     /*Title*/
     .section-title{
