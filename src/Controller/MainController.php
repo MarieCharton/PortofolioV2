@@ -49,7 +49,7 @@ class MainController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contactPage(MailerInterface $mailer)
+    public function contactPage()
     {
 
         // if(isset($_POST) && isset($_POST['submit'])) {
