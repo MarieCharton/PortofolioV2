@@ -1,0 +1,62 @@
+.container-exercice{
+    width: 80%;
+    background-color: white;
+    border: 5px  outset #2d0a58;
+    margin: auto;
+    box-shadow: 6px 6px 0px #2d0a58;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-exercice img{
+    width: 40%;
+}
+
+.preview-and-score{
+    display: flex;
+}
+.exercice-card{
+    width: 50%;
+
+}
+.exercice-card img{
+    width: 80%;
+}
+.exercice-card p, .code p{
+    font-size: 2em;
+}
+
+.image-code img{
+    width: 80%;
+}
+
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+
+    .preview-and-score{
+        display: inline;
+    }
+    .exercice-card{
+        width: 100%;
+    }
+    .exercice-card img{
+        width: 100%;
+    }
+    .exercice-card p,.code p {
+        font-size: 1.3em;
+    }
+    .image-code img{
+        width: 100%;
+    }
+}
+
+
