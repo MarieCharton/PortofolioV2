@@ -4,6 +4,14 @@
 
     {# Start content Contact Page  #}
     <div class="wrapper-form">
+        {# Flash Message #}
+        {% for message in app.flashes('success') %}
+        <div id="flashmessage">
+            <div class="alert alert-success">
+                <i class="fas fa-check-square"></i> {{ message }} 
+            </div>
+        </div>
+        {% endfor %}
         <div class ="intro">
             <p> Vous avez une question ? Une suggestion? Un avis positif ou même négatif ? N'hésitez pas à me contacter à l'aide du formulaire ci-dessous, je vous répondrai au plus vite ! </p>
         </div>

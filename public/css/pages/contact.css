@@ -55,6 +55,16 @@ textarea{
     background:#ec7106 ;
 }
 
+/*FLASHMESSAGE*/
+.alert-success{
+    color:  #2d0a58;
+    background-color: #ec7106;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
     .contact-background{
