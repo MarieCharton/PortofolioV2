@@ -77,3 +77,49 @@
 .see-all-button-orange:hover{
     background-color: #2d0a58;
 }
+
+/*TECHNOLOGIES BUTTON*/
+.technology-button{
+    width: 8%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+}
+
+.html{
+    background-color: #88746e;
+}
+.css{
+    background-color: #c4c27a;
+}
+.sass{
+    background-color: #d89a40;
+}
+.symfony{
+    background-color: #c98c3b;
+}
+.javascript{
+    background-color: #a6a670;
+}
+.phpmyadmin{
+    background-color: #86836d;
+}
+.sql{
+    background-color: #74736a;
+}
+.bootstrap{
+    background-color: #626267;
+}
+.wordpress{
+    background-color: #5b3f63;
+}
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+
+/*TECHNOLOGIES BUTTON*/
+.technology-button{
+    width: 36%;
+}
+}
