@@ -27,15 +27,18 @@
     <body>
 
         {# Bouton Scroll to top  #}
-        <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><img class="arrow-top" src="{{ asset('images/arrow.png') }}" alt=""></button>
+        <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><img class="arrow-top" src="{{ asset('images/boutons/arrow.png') }}" alt=""></button>
 
         {% block body %}{% endblock %}
 
         {% block javascripts %}
+        
+        {#JQUERY#} 
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        
         {# Javascript #}
         <script src="{{ asset('js/app.js') }}"></script>
 
-        {# DIAPO JQUERY  #} 
 
         {% endblock %}
     </body>

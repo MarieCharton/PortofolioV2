@@ -6,29 +6,19 @@
     </div>
 
     <div class="portofolio-background"></div>
-
     <div class="cards">
+    {% for exercice in exercices %}
         <div class="card">
             <div class="crop-image">
-                <a href=""><img src="{{ asset('images/training/cssbattle1.png') }}
-                "></a>
+                <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exercice.target) }}"></a>
             </div> 
             <div class="card-name">
-                <a href="">
-                    <p>CSS BATTLE</p>
-                    <p> Target #1 - Simply Square</p>
+                <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}">
+                    <p> CSS BATTLE</p>
+                    <p>{{exercice.name}}</p>
                 </a>
-               
             </div>
         </div>
-        <div class="card">
-            <div class="crop-image">
-                <a href=""><img src="{{ asset('images/training/frontendmentor1.png') }}"></a>
-            </div>
-            <div class="card-name">
-                <p>FRONT-END-MENTOR</p>
-                <p>-FAQ Accordeon</p>
-            </div>
-        </div>
+    {% endfor %}
     </div>
 </div>

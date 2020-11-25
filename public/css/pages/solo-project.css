@@ -47,6 +47,9 @@
 .project-button img{
     width: 40%;
 }
+.project-button img:hover{
+    transform: rotate(4deg);
+}
 
 
 /*=====TABLETTE=====*/

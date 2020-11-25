@@ -2,6 +2,11 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
+use App\Repository\ExerciceRepository;
+use App\Repository\ProjectRepository;
+use App\Repository\TechnologyRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,20 +22,32 @@ class MainController extends AbstractController
     {
         return $this->render('homepage.html.twig');
     }
+
     /**
      * @Route("/portofolio", name="portofolio")
      */
-    public function portofolio(): Response
+    public function portofolio(ProjectRepository $projectRepository): Response
     {
-        return $this->render('portofolio.html.twig');
+        $projects = $projectRepository->findAll();
+        return $this->render(
+            'portofolio.html.twig',
+            ["projects" => $projects]
+        );
     }
+
     /**
      * @Route("/exercices", name="training")
      */
-    public function training(): Response
+    public function training(ExerciceRepository $exerciceRepository): Response
     {
-        return $this->render('training.html.twig');
+        $exercices = $exerciceRepository->findAll();
+
+        return $this->render(
+            'training.html.twig',
+            ["exercices" => $exercices]
+        );
     }
+
     /**
      * @Route("/cv", name="cv")
      */
@@ -38,12 +55,22 @@ class MainController extends AbstractController
     {
         return $this->render('cv.html.twig');
     }
+
     /**
      * @Route("/blog", name="blog")
      */
-    public function blog(): Response
+    public function blog(CategoryRepository $categoryRepository,TechnologyRepository $technologyRepository,ArticleRepository $articleRepository): Response
     {
-        return $this->render('blog.html.twig');
+        $categories = $categoryRepository->findAll();
+        $technologies = $technologyRepository->findAll();
+        $articles = $articleRepository->findAll();
+        return $this->render('blog.html.twig',
+            [
+                "categories" => $categories,
+                "technologies" => $technologies,
+                "articles" => $articles
+            ]        
+        );
     }
 
     /**

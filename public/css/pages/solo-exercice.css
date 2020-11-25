@@ -28,9 +28,13 @@
 .exercice-card p, .code p{
     font-size: 2em;
 }
+.image-code{
+    width: 80%;
+    margin: auto;
+}
 
 .image-code img{
-    width: 80%;
+    width: 50%;
 }
 
 

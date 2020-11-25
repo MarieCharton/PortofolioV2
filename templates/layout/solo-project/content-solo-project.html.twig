@@ -1,12 +1,12 @@
 <div class="wrapper-page">
     <div class="box-title">
         <div class="page-title">
-            <h1> Nom du projet</h1>
+            <h1> {{project.name}}</h1>
         </div>
     </div>
     <div class="container-project">
         <h3>Présentation du projet : </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores, quae commodi nulla facere molestiae earum quidem inventore facilis? Quidem voluptates quo ad adipisci fugiat, corporis iste explicabo neque fugit, doloremque reprehenderit. Iusto, vel beatae! Harum commodi obcaecati voluptas. Accusantium beatae distinctio neque nisi nesciunt. Consectetur, quisquam vitae! Nam, sequi.</p>
+        <p>{{project.presentation|nl2br}}</p>
         <div class="technology-project">
             <h3>Technologies utilisées : </h3>
             <div class="wrapper-technology-button">
@@ -22,26 +22,26 @@
             </div>
         </div>
         <h3>Deroulé du projet :</h3>   
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe blanditiis illum aut? Dolor minus ea veniam fugit at possimus, neque soluta. Incidunt pariatur excepturi veniam ad nam qui, omnis laborum porro. Similique id, veritatis, earum molestias, ipsam delectus cum at possimus tempora quas excepturi soluta? Aliquam libero ipsa at quam, dignissimos dicta sit odio tenetur nisi enim eligendi nam corrupti, eius, et alias sunt ratione nihil consequuntur! Iusto explicabo ullam in rem impedit et, similique deserunt officiis velit reiciendis! Sapiente consequatur commodi ipsa, at dicta dignissimos optio nam veniam maxime vitae fuga inventore unde nisi dolor blanditiis nostrum ad ipsam eius corrupti modi. Nostrum, alias. Odit dolore id, quaerat autem facere earum numquam, laboriosam excepturi doloremque laudantium voluptates eligendi fugiat assumenda deserunt, velit expedita in nisi harum dicta aliquam animi saepe officia a commodi. Laudantium aliquid, quidem amet totam ratione nulla, cum odit vitae animi recusandae eos aperiam voluptate corporis fugiat. Sint voluptates sit soluta nam eum error praesentium est nesciunt sunt provident illum quam aspernatur quis consequuntur saepe harum exercitationem impedit, quibusdam ducimus itaque at maiores odit. Beatae dicta labore maxime. Eum rerum eaque veniam, eos, nihil, perferendis ex cupiditate eius nesciunt ea earum? Voluptatibus deleniti voluptatum debitis omnis.</p>
+        <p>{{project.progress|nl2br}}</p>
         <div class="project-preview">
             <div class="project-preview-image">
-                <img src="https://i.stack.imgur.com/O4ThM.png" alt="" />     
+                <img src="{{ asset('images/projets/' ~ project.image1) }}" alt="" />     
             </div>
             <div class="project-preview-image">
-                <img src="https://d1syos9fsbz8ei.cloudfront.net/Images/BlogImages/berger-australien_12905.jpg" alt="" />     
+                <img src="{{ asset('images/projets/' ~ project.image2) }}" alt="" />     
             </div>
             <div class="project-preview-image">
-                <img src="https://i.stack.imgur.com/O4ThM.png" alt="" />     
+                <img src="{{ asset('images/projets/' ~ project.image3) }}" alt="" />     
             </div>
             <div class="project-preview-image">
-                <img src="https://www.chasseurdefrance.com/wp-content/uploads/2020/06/dgestim_fnc_chien2014-27-1-scaled-540x0-c-default.jpg" alt="" />     
+                <img src="{{ asset('images/projets/' ~ project.image4) }}" alt="" />     
             </div>
         </div>
         <h3>Informations techniques :</h3>   
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe blanditiis illum aut? Dolor minus ea veniam fugit at possimus, neque soluta. Incidunt pariatur excepturi veniam ad nam qui, omnis laborum porro. Similique id, veritatis, earum molestias, ipsam delectus cum at possimus tempora quas excepturi soluta? Aliquam libero ipsa at quam, dignissimos dicta sit odio tenetur nisi enim eligendi nam corrupti, eius, et alias sunt ratione nihil consequuntur! Iusto explicabo ullam in rem impedit et, similique deserunt officiis velit reiciendis! Sapiente consequatur commodi ipsa, at dicta dignissimos optio nam veniam maxime vitae fuga inventore unde nisi dolor blanditiis nostrum ad ipsam eius corrupti modi. Nostrum, alias. Odit dolore id, quaerat autem facere earum numquam, laboriosam excepturi </p>
+        <p>{{project.information|nl2br}}</p>
         <div class="project-button">
-            <a href=""><img src="{{ asset("images/visit.png")}}" alt=""></a>           
-            <a href=""><img src="{{ asset("images/code.png")}}" alt=""></a>
+            <a href=""><img src="{{ asset("images/boutons/visit.png")}}" alt=""></a>           
+            <a href=""><img src="{{ asset("images/boutons/code.png")}}" alt=""></a>
         </div>
     </div>
 

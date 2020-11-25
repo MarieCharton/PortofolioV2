@@ -1,3 +1,6 @@
+
+
+
 <div class="wrapper-page">
     <div class="box-title">
         <div class="page-title">
@@ -6,61 +9,54 @@
     </div>
     <div class="blog-background"></div>
     <div class="container-article">
+        {% if app.request.get('_route') == 'blog' %}    
         <div class="title-and-articles">
             <div class="blog-title"><h1>Les derniers articles</h1></div>
             <div class="articles">
+                {% for article in articles %}
                 <div class="article">
                     <div class="image-article">
-                        <img src="https://prium-portage.com/wp-content/uploads/2020/06/Reconversion-Professionnelle.jpg" alt="">
+                        <img src="{{ asset('images/' ~ article.image1) }}" alt="">
                     </div>
-                    <h3>Ma reconvertion</h3>
-                    <p>Publié le 12/13/2020</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloribus?</p>
-                    <button>Lire la suite</button>
+                    <h3>{{article.title}}</h3>
+                    <p><i class="far fa-clock"></i> Publié le {{ article.createdAt.date|date("d/m/Y") }}</p>
+                    <p>{{ article.content |slice(0, 200) }} ...</p>
+                    <a href="{{ path('article', {slug: article.slug}) }}"><button>Lire la suite</button></a>
                 </div>
-                <div class="article">
-                    <div class="image-article">
-                        <img src="https://images4.alphacoders.com/936/thumb-1920-936378.jpg" alt="">
-                    </div>                <h3>Titre de l'article</h3>
-                    <p>Publié le 12/13/2020</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloribus?</p>
-                    <button>Lire la suite</button>
-                </div>
-                <div class="article">
-                    <div class="image-article">
-                        <img src="https://i.stack.imgur.com/O4ThM.png" alt="">
-                    </div>                <h3>Titre de l'article</h3>
-                    <p>Publié le 12/13/2020</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloribus?</p>
-                    <button>Lire la suite</button>
-                </div>
-                <div class="article">
-                    <div class="image-article">
-                        <img src="https://via.placeholder.com/400" alt="">
-                    </div>                <h3>Titre de l'article</h3>
-                    <p>Publié le 12/13/2020</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloribus?</p>
-                    <button>Lire la suite</button>
-                </div>
+                {% endfor %}
             </div>
         </div>
+        {% endif %} 
+        {% if app.request.get('_route') == 'article' %}    
+        <div class="title-and-articles">
+            <div class="article-categories">
+                    <p class ="hashtag-category "> #Junior </p>
+                    <p class ="hashtag-category "> #Tips </p>
+            </div>
+            <div class="wrapper-technology-button">
+                <p class ="technology-button html"> HTML </p>
+                <p class ="technology-button css"> CSS </p>
+                <p class ="technology-button sass"> Sass </p>
+                <p class ="technology-button symfony"> Symfony </p>
+            </div>
+            <div class="blog-title"><h1>{{article.title}}</h1></div>
+            <div class="article-picture">
+                <img src="{{ asset('images/essai.jpg') }}" alt="">
+            </div>
+         
+            <p><i class="far fa-clock"></i> Publié le {{ article.createdAt.date|date("d/m/Y") }}</p>  
+            <div class="article-content">{{article.content|nl2br}}</div>
+        </div>
+        {% endif %} 
         <div class="category-menu">
             <img class = "category-button"src="{{ asset('images/boutons/categories.png') }}" alt="">
-                <p>Junior</p>
-                <p>Entrainement</p>
-                <p>Techniques</p>
-                <p>Tips</p>
-                <p>Formation</p>
-                <p>Developpement</p>
+                {% for category in categories %}
+                <p>{{category.name|capitalize}}</p>
+                {% endfor %}
             <img class = "category-button"src="{{ asset('images/boutons/technologies.png') }}" alt="">
-                <p>Developpement</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Symfony</p>
-                <p>Javascript</p>
-                <p>Sass</p>
-                <p>Bootstrap</p>
-                <p>Linux</p>
+                {% for technology in technologies %}
+                <p>{{ technology.name|capitalize}}</p>
+                {% endfor %}
             </ul>
         </div>
     </div>

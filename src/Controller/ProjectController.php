@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,11 +15,16 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProjectController extends AbstractController
 {
     /**
-     * @Route("/nomduprojet", name="solo-project")
+     * @Route("/{slug}", name="solo-project")
      */
-    public function soloproject(): Response
+    public function findOneProject(Project $project): Response
     {
-        return $this->render('solo-project.html.twig');
+        return $this->render(
+            'solo-project.html.twig',[
+                "project" => $project
+            ]
+        
+        );
     }
 
 }

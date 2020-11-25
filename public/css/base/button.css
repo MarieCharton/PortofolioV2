@@ -115,6 +115,17 @@
 .wordpress{
     background-color: #5b3f63;
 }
+
+/*CATEGORY BUTTON*/
+.article-categories{
+    display: flex;
+    justify-content: center;
+}
+.hashtag-category{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px;
+}
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
 
