@@ -10,7 +10,7 @@
         <div class="technology-project">
             <h3>Exercice realisé sur : </h3>
             <div class="image-exercice">
-                <a href=""><img src="https://cssbattle.dev/images/banner.png" alt=""></a>
+                <img src="{{ asset('images/platform/' ~ exercice.platform.image) }}" alt="image-plateforme">
             </div>
             <h3>Lien de l'exercice : <a href="{{ exercice.link }}">{{ exercice.name }}</a> </h3>
         </div>

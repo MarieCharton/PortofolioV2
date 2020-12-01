@@ -64,6 +64,22 @@ class Project
     private $information;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $link;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $linkGithub;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $workInProgress;
+
+    // ! Relation
+    /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Technology", inversedBy="projects")
      */
     private $technologies;
@@ -203,6 +219,66 @@ class Project
     public function setTechnologies($technologies)
     {
         $this->technologies = $technologies;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of link
+     */ 
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set the value of link
+     *
+     * @return  self
+     */ 
+    public function setLink($link)
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of linkGithub
+     */ 
+    public function getLinkGithub()
+    {
+        return $this->linkGithub;
+    }
+
+    /**
+     * Set the value of linkGithub
+     *
+     * @return  self
+     */ 
+    public function setLinkGithub($linkGithub)
+    {
+        $this->linkGithub = $linkGithub;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of workInProgress
+     */ 
+    public function getWorkInProgress()
+    {
+        return $this->workInProgress;
+    }
+
+    /**
+     * Set the value of workInProgress
+     *
+     * @return  self
+     */ 
+    public function setWorkInProgress($workInProgress)
+    {
+        $this->workInProgress = $workInProgress;
 
         return $this;
     }

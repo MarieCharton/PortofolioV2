@@ -8,6 +8,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
 }
 .container-project h3{
     text-align: center;
@@ -35,6 +37,9 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.project-preview-image img{
+    width: 100%;
 }
 
 .project-button{

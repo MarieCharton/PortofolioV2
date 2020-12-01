@@ -81,11 +81,16 @@
 /*TECHNOLOGIES BUTTON*/
 .technology-button{
     width: 8%;
+}
+
+/* .technology-button{
+    width: 8%;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
     color: white;
     margin: 10px;
+    text-transform: uppercase;
 }
 
 .html{
@@ -114,7 +119,7 @@
 }
 .wordpress{
     background-color: #5b3f63;
-}
+} */
 
 /*CATEGORY BUTTON*/
 .article-categories{

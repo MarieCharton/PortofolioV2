@@ -12,7 +12,8 @@
 }
 
 .image-exercice img{
-    width: 40%;
+    border: 2px solid #2d0a58;
+    width: 20%;
 }
 
 .preview-and-score{

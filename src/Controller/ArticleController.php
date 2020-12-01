@@ -23,9 +23,6 @@ class ArticleController extends AbstractController
     {
         $categories = $categoryRepository->findAll();
         $technologies = $technologyRepository->findAll();
-        $content = $article->getContent();
-        $lignes = substr_count($content, "\n");
-        dump($lignes);
 
         return $this->render(
             'blog.html.twig',[

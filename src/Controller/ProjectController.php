@@ -19,9 +19,12 @@ class ProjectController extends AbstractController
      */
     public function findOneProject(Project $project): Response
     {
+        $technologies = $project->getTechnologies();
+        
         return $this->render(
             'solo-project.html.twig',[
-                "project" => $project
+                "project" => $project,
+                "technologies" => $technologies
             ]
         
         );

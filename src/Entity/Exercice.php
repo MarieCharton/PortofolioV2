@@ -52,6 +52,15 @@ class Exercice
      */
     private $code;
 
+    // ! Relation
+
+    /**
+    * @ORM\ManyToOne(targetEntity="App\Entity\Platform", inversedBy="exercices")
+    */
+    private $platform;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -178,6 +187,26 @@ class Exercice
     public function setSlug($slug)
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of platform
+     */ 
+    public function getPlatform()
+    {
+        return $this->platform;
+    }
+
+    /**
+     * Set the value of platform
+     *
+     * @return  self
+     */ 
+    public function setPlatform($platform)
+    {
+        $this->platform = $platform;
 
         return $this;
     }

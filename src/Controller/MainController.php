@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Repository\ArticleRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\ExerciceRepository;
+use App\Repository\PlatformRepository;
 use App\Repository\ProjectRepository;
 use App\Repository\TechnologyRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -38,13 +39,17 @@ class MainController extends AbstractController
     /**
      * @Route("/exercices", name="training")
      */
-    public function training(ExerciceRepository $exerciceRepository): Response
+    public function training(ExerciceRepository $exerciceRepository,PlatformRepository $platformRepository): Response
     {
         $exercices = $exerciceRepository->findAll();
+        $platforms = $platformRepository->findAll();
 
         return $this->render(
             'training.html.twig',
-            ["exercices" => $exercices]
+            [
+                "exercices" => $exercices,
+                "platforms" => $platforms
+            ]
         );
     }
 
