@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-
-use Doctrine\ORM\Mapping as ORM;
+use App\Repository\HashtagRepository;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @ORM\Entity(repositoryClass=HashtagRepository::class)
  */
-class Category
+class Hashtag
 {
     /**
      * @ORM\Id
@@ -24,19 +24,15 @@ class Category
      */
     private $name;
 
-    // ! Relations
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Article", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity=Article::class, inversedBy="hashtags")
      */
     private $articles;
-
 
     public function __construct()
     {
         $this->articles = new ArrayCollection();
     }
-
-
 
     public function getId(): ?int
     {
@@ -56,21 +52,25 @@ class Category
     }
 
     /**
-     * Get many Categories have Many Articles.
-     */ 
-    public function getArticles()
+     * @return Collection|Article[]
+     */
+    public function getArticles(): Collection
     {
         return $this->articles;
     }
 
-    /**
-     * Set many Categories have Many Articles.
-     *
-     * @return  self
-     */ 
-    public function setArticles($articles)
+    public function addArticle(Article $article): self
     {
-        $this->articles = $articles;
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): self
+    {
+        $this->articles->removeElement($article);
 
         return $this;
     }

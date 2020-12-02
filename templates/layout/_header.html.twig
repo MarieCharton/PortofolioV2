@@ -5,11 +5,18 @@
     <nav class="links">
         <p><i class="fas fa-code fa-2x"></i></p>
         <ul>
-            <li class="link"><a href="{{ path('portofolio') }}">Portofolio</a></li>
-            <li class="link"><a href="{{ path('training') }}">Exercices</a></li>
-            <li class="link"><a href="{{ path('cv') }}"> CV </a></li>
-            <li class="link"><a href="{{ path('blog') }}"> Blog </a></li>
-            <li class="link"><a href="{{ path('contact') }}"> <i class="fas fa-envelope-square"></i> Contact </a></li>
+            <li class="link"><a href="{{ path ('portofolio') }}">Portofolio</a></li>
+            <li class="link"><a href="{{ path ('training') }}">Exercices</a></li>
+            <li class="link"><a href="{{ path ('cv') }}"> CV </a></li>
+            <li class="link"><a href="{{ path ('blog') }}"> Blog </a></li>
+            <li class="link"><a href="{{ path ('contact') }}"> Contact </a></li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <li class="link"><a href="{{ path ('app_logout') }}" onclick="return confirm('Confirmez la déconnexion ?')">Déconnexion</a></li>     
+            <li class="link"><a href="{{ path ('admin') }}">Admin</a></li>
+            {% endif %} 
+            {# {% if is_granted('ROLE_USER') %}
+            <li class="link" >Bienvenue {{app.user.username|capitalize}} <i class="far fa-smile"></i></li>        
+            {% endif %}     #}
         </ul>
         <p><i class="fas fa-code fa-2x "></i></p>
     </nav>

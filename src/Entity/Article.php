@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -26,12 +27,12 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $slug;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $createdAt;
 
@@ -46,7 +47,7 @@ class Article
     private $content;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image1;
 
@@ -67,21 +68,22 @@ class Article
 
     // ! Relations 
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Category", inversedBy="articles")
-     */
-    private $categories;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Technology", inversedBy="articles")
      */
     private $technologies;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Hashtag::class, mappedBy="articles")
+     */
+    private $hashtags;
+
 
     public function __construct()
     {
-        $this->categories = new ArrayCollection();
         $this->technologies = new ArrayCollection();
+        $this->hashtags = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -233,6 +235,33 @@ class Article
     public function setTechnologies($technologies)
     {
         $this->technologies = $technologies;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Hashtag[]
+     */
+    public function getHashtags(): Collection
+    {
+        return $this->hashtags;
+    }
+
+    public function addHashtag(Hashtag $hashtag): self
+    {
+        if (!$this->hashtags->contains($hashtag)) {
+            $this->hashtags[] = $hashtag;
+            $hashtag->addArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHashtag(Hashtag $hashtag): self
+    {
+        if ($this->hashtags->removeElement($hashtag)) {
+            $hashtag->removeArticle($this);
+        }
 
         return $this;
     }

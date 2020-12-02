@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App\Repository\ArticleRepository;
-use App\Repository\CategoryRepository;
 use App\Repository\ExerciceRepository;
+use App\Repository\HashtagRepository;
 use App\Repository\PlatformRepository;
 use App\Repository\ProjectRepository;
 use App\Repository\TechnologyRepository;
@@ -64,14 +64,14 @@ class MainController extends AbstractController
     /**
      * @Route("/blog", name="blog")
      */
-    public function blog(CategoryRepository $categoryRepository,TechnologyRepository $technologyRepository,ArticleRepository $articleRepository): Response
+    public function blog(HashtagRepository $hashtagRepository,TechnologyRepository $technologyRepository,ArticleRepository $articleRepository): Response
     {
-        $categories = $categoryRepository->findAll();
+        $hashtags = $hashtagRepository->findAll();
         $technologies = $technologyRepository->findAll();
         $articles = $articleRepository->findAll();
         return $this->render('blog.html.twig',
             [
-                "categories" => $categories,
+                "hashtags" => $hashtags,
                 "technologies" => $technologies,
                 "articles" => $articles
             ]        

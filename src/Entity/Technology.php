@@ -34,6 +34,8 @@ class Technology
      */
     private $projects;
 
+    
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
