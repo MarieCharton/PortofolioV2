@@ -19,11 +19,7 @@
         <div>
             <p>Titre de l'article :</p>
             {{ form_errors(formArticle.title) }}
-            {{ form_widget(formArticle.title, {
-                'attr': {
-                    'placeholder': '2 caractéres minimum',
-                }
-            }) }}
+            {{ form_widget(formArticle.title) }}
         </div>
 
         <div class="description">
@@ -31,6 +27,11 @@
             {{ form_errors(formArticle.content) }}
             {{ form_widget(formArticle.content, {
                 }) }}
+        </div>
+        <div>
+            <p>Lien utile:</p>
+            {{ form_errors(formArticle.link) }}
+            {{ form_widget(formArticle.link) }}
         </div>
 
         <div>
@@ -54,8 +55,13 @@
             {{ form_errors(formArticle.image4) }}
             {{ form_widget(formArticle.image4)}}
         </div>   
-        <div class = "techno-list">
+        <p>Technos</p>
+        <div class = "form-list">
             {{ form_widget(formArticle.technologies)}}
+        </div>  
+        <p>Hashtags</p>
+        <div class = "form-list">
+            {{ form_widget(formArticle.hashtags)}}
         </div>  
 
         <div class ="button-center">

@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Article;
+use App\Entity\Hashtag;
 use App\Entity\Technology;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,6 +21,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('title',TextType::class, ["label" => "Titre de l'article"])
             ->add('content',TextareaType::class, ["label" => "Contenu de l'article"])
+            ->add('link',TextareaType::class, ["label" => "Lien utile"])
             ->add('image1', FileType::class, [
                 'label' => "Image de l'article",
                 'mapped'=>false,
@@ -40,16 +42,13 @@ class ArticleType extends AbstractType
                 'mapped'=>false,
                 "required"=> false
                 ])
-                // ->add('categories', EntityType::class, [
-                //     'class' => Category::class,
-                //     'query_builder' => function (CategoryRepository $category) {
-                //         return $category->createQueryBuilder('cat')
-                //             ->orderBy('cat.name', 'ASC');
-                //     },
-                //     'choice_label' => 'name',
-                //     'placeholder' => 'categorie',
-                //     'multiple' => false,
-                // ])
+            ->add('hashtags', EntityType::class, [
+                'by_reference' => false,
+                'class' => Hashtag::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                "expanded"=> true,
+            ])
             ->add('technologies', EntityType::class, [
                 'by_reference' => false,
                 'class' => Technology::class,

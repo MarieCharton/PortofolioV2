@@ -44,7 +44,11 @@
             <a href="{{ path('update-article', {id: article.id}) }}"><button>Modifier</button></a>
             <a href="{{ path('delete-article', {id: article.id}) }}"onclick="return confirm('Confirmez la suppression ?')"><button>Supprimer</button></a>
             {% endif %}   
-            <div class="article-content">{{article.content|nl2br}}</div>
+            <div class="article-content">
+                <p>{{article.content|nl2br}}</p>
+                <a href="{{article.link}}"><i class="fas fa-link"></i> Lien vers le site </a>  
+            </div>
+
         </div>
         {% endif %} 
         <div class="category-menu">

@@ -47,6 +47,11 @@ class Article
     private $content;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $link;
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image1;
@@ -262,6 +267,26 @@ class Article
         if ($this->hashtags->removeElement($hashtag)) {
             $hashtag->removeArticle($this);
         }
+
+        return $this;
+    }
+
+    /**
+     * Get the value of link
+     */ 
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set the value of link
+     *
+     * @return  self
+     */ 
+    public function setLink($link)
+    {
+        $this->link = $link;
 
         return $this;
     }
