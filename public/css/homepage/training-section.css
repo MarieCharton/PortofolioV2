@@ -1,9 +1,17 @@
 /*TRAINING PART */
 .banner-training{
-    margin-bottom: -40px;
     text-align: center;
     margin-top: 2%;
 }
 .intro-training{
     width: 27%;
+}
+
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+}
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
 }

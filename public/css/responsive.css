@@ -60,38 +60,11 @@
         margin: auto;
     }
 
-   
-
     /*Title*/
     .section-title{
         font-size: 23px;
     }
-    /*Techno*/
-    .intro-techno{
-        width: 80%;
-    }
-    .banner-techno{
-        margin-top: 20px;
-        margin-bottom: -23px;
-    }
 
-    /*Project*/
-    .intro-project{
-        width: 80%;
-    }
-    .banner-project{
-        margin-top: 30px;
-        margin-bottom: -26px;
-    }
-
-    /*Training*/
-    .intro-training{
-        width: 80%;
-    }
-    .banner-training{
-        margin-top: 30px;
-        margin-bottom: -24px ;
-    }
 
     /*Social*/
     .social-wrapper {
@@ -242,38 +215,6 @@
     /*Title*/
     .section-title{
         font-size: 23px;
-    }
-    /*Techno*/
-    .intro-techno{
-        width: 100%;
-    }
-    .banner-techno{
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: -29px;
-        width: 50%;
-    }
-
-    /*Project*/
-    .intro-project{
-        width: 80%;
-    }
-    .banner-project{
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: -29px;
-        width: 50%;
-    }
-
-    /*Training*/
-    .intro-training{
-        width: 80%;
-    }
-    .banner-training{
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: -29px;
-        width: 50%;
     }
 
 

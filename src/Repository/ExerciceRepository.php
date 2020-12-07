@@ -47,6 +47,5 @@ class ExerciceRepository extends ServiceEntityRepository
             return $query->getResult();
         }
 
-
     }
 }

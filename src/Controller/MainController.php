@@ -19,17 +19,20 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="homepage")
      */
-    public function homepage(ProjectRepository $projectRepository,ExerciceRepository $exerciceRepository): Response
+    public function homepage(ArticleRepository $articleRepository,ProjectRepository $projectRepository,ExerciceRepository $exerciceRepository): Response
     {
+        $lastArticles = $articleRepository->findLastArticles();
         $lastExercices = $exerciceRepository->findLastExercices();
         $project1 = $projectRepository->find(1);
         $project2 = $projectRepository->find(2);
         $project3 = $projectRepository->find(3);
+        
         return $this->render('homepage.html.twig',[
             "project1" => $project1,
             "project2" => $project2,
             "project3" => $project3,
             "lastExercices" => $lastExercices,
+            "lastArticles" => $lastArticles
 
         ]);
     }

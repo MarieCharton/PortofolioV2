@@ -29,7 +29,21 @@ class ArticleRepository extends ServiceEntityRepository
     
             return $query->getResult();
         }
-
+    }
+    public function findLastArticles()
+    {
+        {
+            $entityManager = $this->getEntityManager();
+    
+            $query = $entityManager->createQuery("
+            SELECT article
+            FROM App\Entity\Article article
+            ORDER BY article.createdAt DESC
+            ")
+            ->setMaxResults(3);
+    
+            return $query->getResult();
+        }
 
     }
 }
