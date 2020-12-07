@@ -69,8 +69,6 @@ class ArticleController extends AbstractController
         $hashtags = $hashtagRepository->findAll();
         $technologies = $technologyRepository->findAll();
 
-        dump($articlesByHashtag);
-
         return $this->render(
             'blog.html.twig',
             [
