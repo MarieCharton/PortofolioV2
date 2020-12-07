@@ -19,6 +19,7 @@ class SecurityController extends AbstractController
 
     /**
      * @Route ("/create_account", name="create_account")
+    * @IsGranted("ROLE_ADMIN")
      */
     public function createUser(Request $request, UserPasswordEncoderInterface $encoder)
     {
