@@ -221,4 +221,7 @@
     .hashtag-category {
         font-size: 1.2em;
     }
+    .article-content{
+        width: 80%;
+    }
 }
