@@ -9,7 +9,9 @@
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
-    font-size: 1.3em;
+}
+.exercice-description{
+    font-size: 1.4em;
 }
 
 .image-exercice img{

@@ -11,7 +11,7 @@
         <a href="{{ path('delete_exercice', {id: exercice.id}) }}"onclick="return confirm('Confirmez la suppression ?')"><button>Supprimer</button></a>
         {% endif %}  
         <h3>Les difficultés : </h3>
-        <p>{{ exercice.description|nl2br }}</p>
+        <p class = "exercice-description">{{ exercice.description|nl2br }}</p>
         <div class="technology-project">
             <h3>Exercice realisé sur : </h3>
             <div class="image-exercice">
