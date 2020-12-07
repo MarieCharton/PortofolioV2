@@ -1,3 +1,4 @@
+{# Partie commune a toutes les pages  #}
 <div class="wrapper-page">
     <div class="box-title">
         <div class="page-title">
@@ -6,9 +7,32 @@
     </div>
     <div class="blog-background"></div>
     <div class="container-article">
+{# Fin Partie commune a toutes les pages  #}
+
+        {# Route Article par Catégories #}
+        {% if app.request.get('_route') == 'article_by_hashtag' %}    
+        <div class="title-and-articles">  
+            <div class="blog-title"><h1>Les articles #{{hashtag.name|capitalize}}</h1></div>
+            <div class="articles">
+                {% for articleByHashtag in articlesByHashtag %}
+                <div class="article">
+                    <div class="image-article">
+                        <img src="{{ asset('uploads/' ~ articleByHashtag.image1) }}" alt="">
+                    </div>
+                    <h3>{{articleByHashtag.title}}</h3>
+                    <p><i class="far fa-clock"></i> Publié le {{ articleByHashtag.createdAt.date|date("d/m/Y") }}</p>
+                    <p>{{ articleByHashtag.content |slice(0, 200) }} ...</p>
+                    <a href="{{ path('article', {slug: articleByHashtag.slug}) }}"><button>Lire la suite</button></a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %} 
+
+        {# Route BLOG  #}
         {% if app.request.get('_route') == 'blog' %}    
-        <div class="title-and-articles">
-            <div class="blog-title"><h1>Les derniers articles</h1></div>
+        <div class="title-and-articles">  
+            <div class="blog-title"><h1><h1>Les articles </h1></h1></div>
             <div class="articles">
                 {% for article in articles %}
                 <div class="article">
@@ -24,11 +48,14 @@
             </div>
         </div>
         {% endif %} 
+
+        {# Route Article solo  #}
         {% if app.request.get('_route') == 'article' %}    
         <div class="title-and-articles">
             <div class="article-categories">
-                    <p class ="hashtag-category "> #Junior </p>
-                    <p class ="hashtag-category "> #Tips </p>
+             {% for article_hashtag in article_hashtags %}
+                    <p class ="hashtag-category "> #{{article_hashtag.name|capitalize}}</p>
+            {% endfor %}
             </div>
             <div class="wrapper-technology-button">
                 {% for article_techno in article_technos %} 
@@ -46,20 +73,25 @@
             {% endif %}   
             <div class="article-content">
                 <p>{{article.content|nl2br}}</p>
+                {% if article.link is not empty %}
                 <a href="{{article.link}}"><i class="fas fa-link"></i> Lien vers le site </a>  
+                {% endif %}
             </div>
-
+        {% include 'layout/_previous-page.html.twig' %}
         </div>
         {% endif %} 
+
+        {# Partie commune a toutes les pages  #}
         <div class="category-menu">
             <img class = "category-button"src="{{ asset('images/boutons/categories.png') }}" alt="">
                 {% for hashtag in hashtags %}
-                <p>{{hashtag.name|capitalize}}</p>
+                <a href="{{ path('article_by_hashtag', {id: hashtag.id}) }}"><p>{{hashtag.name|capitalize}}</p></a>
                 {% endfor %}
             <img class = "category-button"src="{{ asset('images/boutons/technologies.png') }}" alt="">
                 {% for technology in technologies %}
-                <p>{{ technology.name|capitalize}}</p>
+                <a href=""><p>{{ technology.name|capitalize}}</p></a>
                 {% endfor %}
         </div>
     </div>
 </div>
+{# FinPartie commune a toutes les pages  #}

@@ -1,7 +1,12 @@
 <div class="wrapper-page">
     <div class="box-title">
         <div class="page-title">
+            {% if app.request.get('_route') == 'training' %}   
             <h1><i class="fas fa-pencil-alt"></i> Exercices</h1>
+            {% endif %}
+            {% if app.request.get('_route') == 'exercice_by_plaform' %}   
+            <h1>{{platform.name|capitalize}}</h1>
+            {% endif %}
         </div>
     </div>
 
@@ -9,24 +14,44 @@
 
     <div class="training-container">
         <div class="cards">
+        {% if app.request.get('_route') == 'training' %}   
         {% for exercice in exercices %}
             <div class="card">
                 <div class="crop-image">
-                    <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exercice.target) }}"></a>
+                    <a href="{{ path('exercice', {slug: exercice.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exercice.target) }}"></a>
                 </div> 
                 <div class="card-name">
-                    <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}">
+                    <a href="{{ path('exercice', {slug: exercice.slug}) }}">
                         <p> CSS BATTLE</p>
                         <p>{{exercice.name}}</p>
                     </a>
                 </div>
             </div>
+        {# {{ knp_pagination_render(articles) }} #}
         {% endfor %}
+        {% endif %}
+        {% if app.request.get('_route') == 'exercice_by_plaform' %}   
+        {% for exerciceByPlatform in exercicesByPlatform %}
+            <div class="card">
+                <div class="crop-image">
+                    <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exerciceByPlatform.target) }}"></a>
+                </div> 
+                <div class="card-name">
+                    <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}">
+                        <p> CSS BATTLE</p>
+                        <p>{{exerciceByPlatform.name}}</p>
+                    </a>
+                </div>
+            </div>
+        {{ knp_pagination_render(exercicesByPlatform) }}
+        {% endfor %}
+        {% endif %}
+     
         </div>
         <div class="category-menu">
             <img class = "category-button"src="{{ asset('images/boutons/platform.png') }}" alt="">
             {% for platform in platforms %} 
-            <p>{{platform.name|capitalize}}</p>
+            <a href="{{ path('exercice_by_plaform', {id: platform.id}) }}"><p>{{platform.name|capitalize}}</p></a>
             {% endfor %}    
         </div>
     </div>

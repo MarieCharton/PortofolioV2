@@ -1,16 +1,14 @@
-.formulaire{
+.formulaire, #exercice_link{
     width: 60%;
     margin:auto;
 }
 
 /* Textarea ajout article  */
-#article_content{
+#article_content,#exercice_description{
     width: 100%;
     height: 300px;
 }
 .form-list{
-    /* display: flex;
-    justify-content: center; */
     font-size: 1.3em;
 }
  
@@ -31,3 +29,8 @@
     font-size: 1.3em;
     margin: 20px;
 }
+#exercice_platform{
+    font-size: 1.2em;
+    margin: auto;
+}
+

@@ -4,7 +4,12 @@
             <h1>{{ exercice.name }}</h1>
         </div>
     </div>
+    {% include 'layout/_previous-page.html.twig' %}
     <div class="container-exercice">
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('update_exercice', {id: exercice.id}) }}"><button>Modifier</button></a>
+        <a href="{{ path('delete_exercice', {id: exercice.id}) }}"onclick="return confirm('Confirmez la suppression ?')"><button>Supprimer</button></a>
+        {% endif %}  
         <h3>Les difficultés : </h3>
         <p>{{ exercice.description|nl2br }}</p>
         <div class="technology-project">
@@ -17,18 +22,18 @@
         <div class="preview-and-score">
             <div class="exercice-card">
                 <p><i class="fas fa-bullseye"></i> Objectif</p>
-                <img src="{{ asset('images/training/image-target/' ~ exercice.target ) }}" alt="{{ exercice.name }}">
+                <img src="{{ asset('uploads/' ~ exercice.target ) }}" alt="{{ exercice.name }}">
                 <img src="" alt="">
             </div>
             <div class="exercice-card">
                 <p><i class="fas fa-signal"></i> Score</p>
-                <img src="{{ asset('images/training/image-score/' ~ exercice.score ) }}" alt="{{ exercice.name }}">
+                <img src="{{ asset('uploads/' ~ exercice.score ) }}" alt="{{ exercice.name }}">
             </div>
         </div>
         <div class="code">
             <div class="image-code">
                 <p><i class="fas fa-terminal"></i> Code</p>
-                <img src="{{ asset('images/training/image-code/' ~ exercice.code ) }}" alt="{{ exercice.name }}">
+                <img src="{{ asset('uploads/' ~ exercice.code ) }}" alt="{{ exercice.name }}">
             </div>
         </div>
     </div>

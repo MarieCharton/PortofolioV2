@@ -14,9 +14,33 @@
 .invert{  
     filter: invert(100%); 
 }
-.git {
-    width: 8%;
+.logo-techno {
+    width: 10%;
+    padding: 5px;
 }
-.image-techno{
-    padding: 20px;
+.mini{
+    width: 7%;
+}
+
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    .logo-techno{
+        width: 14%;
+    }
+    .mini{
+        width: 10%;
+    }
+    
+
+}
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+    .logo-techno{
+        width: 15%;
+    }
+    .mini{
+        width: 10%;
+    }
 }

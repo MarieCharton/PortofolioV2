@@ -21,7 +21,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('title',TextType::class, ["label" => "Titre de l'article"])
             ->add('content',TextareaType::class, ["label" => "Contenu de l'article"])
-            ->add('link',TextareaType::class, ["label" => "Lien utile"])
+            ->add('link',TextareaType::class, ["label" => "Lien utile","required"=> false])
             ->add('image1', FileType::class, [
                 'label' => "Image de l'article",
                 'mapped'=>false,
