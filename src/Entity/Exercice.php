@@ -38,6 +38,12 @@ class Exercice
     private $link;
 
     /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $createdAt;
+
+
+    /**
      * @ORM\Column(type="string", length=255,nullable=true)
      */
     private $target;
@@ -207,6 +213,26 @@ class Exercice
     public function setPlatform($platform)
     {
         $this->platform = $platform;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of createdAt
+     */ 
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set the value of createdAt
+     *
+     * @return  self
+     */ 
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

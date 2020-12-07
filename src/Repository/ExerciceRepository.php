@@ -32,4 +32,21 @@ class ExerciceRepository extends ServiceEntityRepository
 
 
     }
+    public function findLastExercices()
+    {
+        {
+            $entityManager = $this->getEntityManager();
+    
+            $query = $entityManager->createQuery("
+            SELECT exercice
+            FROM App\Entity\Exercice exercice
+            ORDER BY exercice.createdAt DESC
+            ")
+            ->setMaxResults(3);
+    
+            return $query->getResult();
+        }
+
+
+    }
 }

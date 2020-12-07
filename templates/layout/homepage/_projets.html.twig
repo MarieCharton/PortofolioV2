@@ -6,24 +6,24 @@
     <div class="last-three">
         <div class="box orange-box">
             <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/projet1.png') }}" alt="">
+                <img class= "picture"src="{{ asset('images/projets/' ~ project1.image1 ) }}" alt="">
             </div>
-            <h3>Espoir sur Pattes</h3>
-            <a href="https://www.cedricpaje.fr/"><button class = " button-round violet-button">Voir le projet</button></a>
+            <h3>{{project1.name}}</h3>
+            <a href="{{ path('solo-project', {slug: project1.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
         </div>
         <div class="box orange-box">
             <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/projet2.png') }}" alt="">
+                <img class= "picture"src="{{ asset('images/projets/' ~ project2.image1 ) }}" alt="">
             </div>
-            <h3>Espoir sur Pattes V2</h3>
-            <a href="https://espoirsurpattes.mariecharton.fr/"><button class = " button-round violet-button">Voir le projet</button></a>
+            <h3>{{project2.name}}</h3>
+            <a href="{{ path('solo-project', {slug: project2.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
         </div>
             <div class="box orange-box">
             <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/projet4.png') }}" alt="">
+                <img class= "picture"src="{{ asset('images/projets/' ~ project3.image1 ) }}" alt="">
             </div>
-            <h3>Des étoiles dans la mer</h3>
-            <a href="https://desetoilesdanslamer.fr/"><button class = " button-round violet-button">Voir le projet</button></a>
+            <h3>{{project3.name}}</h3>
+            <a href="{{ path('solo-project', {slug: project3.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
         </div>
     </div>
 </div>
