@@ -59,8 +59,13 @@
     font-size: 1.2em;
     font-weight: bold;
 }
-.category-menu li{
-    list-style: none;
+.category-menu a {
+    text-decoration: none;
+    color:  #ea8342;
+}
+.category-menu a:hover {
+    text-decoration: underline;
+
 }
 
 /* Bouton Lire la suite*/

@@ -47,6 +47,18 @@ button{
     text-align: center;
     font-size: 2em;
 }
+.previous-page{
+    /* background-color: blue; */
+    font-size: 1.4em;
+    margin-left: 10%;
+    text-decoration: none;
+}
+.previous-page a{
+    text-decoration: none;
+}
+.previous-page a:hover{
+    text-decoration: underline;
+}
 @media (max-width: 599px) and (min-width: 0px){
     .mentions {
         font-size: 1.2em;

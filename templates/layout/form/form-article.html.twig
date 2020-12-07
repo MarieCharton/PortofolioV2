@@ -8,12 +8,6 @@
 <div class="formulaire">   
 {{ form_start(formArticle) }}
 
-    {# Header for create #}
-   {% if app.request.get('_route') == 'article_create' %}
-    <div class="form-header">   
-        <h2><i class="fas fa-edit"></i> Publier un article</h2>        
-    </div>
-    {% endif %}
 
     <div class="form-content">   
         <div>

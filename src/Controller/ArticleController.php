@@ -4,17 +4,22 @@ namespace App\Controller;
 
 use DateTime;
 use App\Entity\Article;
+use App\Entity\Hashtag;
+use App\Entity\Technology;
 use App\Form\ArticleType;
 use App\Services\Slugger;
 use App\Services\ImageUploader;
 use App\Repository\ArticleRepository;
 use App\Repository\HashtagRepository;
+use App\Repository\CategoryRepository;
+use App\Repository\ExerciceRepository;
 use App\Repository\TechnologyRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
@@ -24,28 +29,62 @@ class ArticleController extends AbstractController
     //? CRUD 
 
     //! READ
+
+    //Find One Article
     /**
-     * @Route("/{slug}/lecture", name="article")
+     * @Route("/{slug}/lecture-article", name="article")
      */
-    public function findOneArticle(Article $article,HashtagRepository $hashtagRepository,TechnologyRepository $technologyRepository): Response
+    public function readOneArticle(Article $article,HashtagRepository $hashtagRepository,TechnologyRepository $technologyRepository): Response
     {
 
         $hashtags = $hashtagRepository->findAll();
         $technologies = $technologyRepository->findAll();
         $article_technos = $article->getTechnologies();
+        $article_hashtags =$article->getHashtags();
 
         return $this->render(
             'blog.html.twig',[
                 "hashtags" => $hashtags,
                 "technologies" => $technologies,
                 "article" => $article,
-                "article_technos" => $article_technos
+                "article_technos" => $article_technos,
+                "article_hashtags" => $article_hashtags
+            ]
+        );
+    }
+
+    //Find articles by category
+    /**
+     * @Route("/{id}/lecture-hashtag", name="article_by_hashtag")
+     */
+    public function readArticleByHashtag(Hashtag $hashtag,TechnologyRepository $technologyRepository,HashtagRepository $hashtagRepository,Request $request,$id,ArticleRepository $articleRepository,PaginatorInterface $paginator): Response
+    {
+        
+            $articlesByHashtag = $paginator->paginate(
+            $articleRepository->findArticlesbyCategory($id),
+            $request->query->getInt('page', 1),
+            9
+        );
+        $articles = $articleRepository->findAll();
+        $hashtags = $hashtagRepository->findAll();
+        $technologies = $technologyRepository->findAll();
+
+        dump($articlesByHashtag);
+
+        return $this->render(
+            'blog.html.twig',
+            [
+                "hashtags" => $hashtags,
+                "hashtag" => $hashtag,
+                "technologies" => $technologies,
+                "articles" => $articles,
+                "articlesByHashtag" => $articlesByHashtag
+   
             ]
         );
     }
 
     //! CREATE
-
     /**
     * @Route ("/create_article", name="create_article")
     * @IsGranted("ROLE_ADMIN")
@@ -97,6 +136,7 @@ class ArticleController extends AbstractController
             ]
         );
     }
+
     //! UPDATE //
     /**
      * @Route ("/updade-article/{id}",name ="update-article")

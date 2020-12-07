@@ -19,6 +19,7 @@
     width: 15%;
     text-align: center;
 }
+
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
     .training-background{

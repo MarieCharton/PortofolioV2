@@ -1,0 +1,67 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+
+<div class="formulaire">   
+{{ form_start(formExercice) }}
+
+
+    <div class="form-content">   
+        <div>
+            <p>Nom de l'exercice :</p>
+            {{ form_errors(formExercice.name) }}
+            {{ form_widget(formExercice.name) }}
+        </div>
+
+        <div class="description">
+            <p>Contenu de l'article : </p>
+            {{ form_errors(formExercice.description) }}
+            {{ form_widget(formExercice.description) }}
+        </div>
+        <div>
+            <p>Lien utile:</p>
+            {{ form_errors(formExercice.link) }}
+            {{ form_widget(formExercice.link) }}
+        </div>
+
+        <div>
+            <p>Image de l'article  </p>
+            {{ form_errors(formExercice.target) }}
+            {{ form_widget(formExercice.target)}}
+        </div>         
+        <div>
+            <p>Image de l'article 2 </p>
+            {{ form_errors(formExercice.score) }}
+            {{ form_widget(formExercice.score)}}
+        </div>         
+
+        <div>
+            <p>Image de l'article 3 </p>
+            {{ form_errors(formExercice.code) }}
+            {{ form_widget(formExercice.code)}}
+        </div>     
+        <p>Plateforme</p>
+        <div class = "form-list">
+            {{ form_widget(formExercice.platform)}}
+        </div>  
+ 
+        <div class ="button-center">
+            {{ form_widget(formExercice.envoyer, {
+                'label': 'Envoyer',
+                'attr': {
+                    'type': 'submit'
+                }
+            }) }}
+        </div>
+    </div>
+    
+{{ form_end(formExercice) }}
+</div>
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}
+
