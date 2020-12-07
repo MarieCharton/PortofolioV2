@@ -18,7 +18,7 @@
         {% for exercice in exercices %}
             <div class="card">
                 <div class="crop-image">
-                    <a href="{{ path('exercice', {slug: exercice.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exercice.target) }}"></a>
+                    <a href="{{ path('exercice', {slug: exercice.slug}) }}"><img src="{{ asset('uploads/'~ exercice.target) }}"></a>
                 </div> 
                 <div class="card-name">
                     <a href="{{ path('exercice', {slug: exercice.slug}) }}">
@@ -34,7 +34,7 @@
         {% for exerciceByPlatform in exercicesByPlatform %}
             <div class="card">
                 <div class="crop-image">
-                    <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exerciceByPlatform.target) }}"></a>
+                    <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}"><img src="{{ asset('uploads/'~ exerciceByPlatform.target) }}"></a>
                 </div> 
                 <div class="card-name">
                     <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}">
