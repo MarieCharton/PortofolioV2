@@ -1,0 +1,83 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+
+<div class="formulaire">   
+{{ form_start(formArticle) }}
+
+    {# Header for create #}
+   {% if app.request.get('_route') == 'article_create' %}
+    <div class="form-header">   
+        <h2><i class="fas fa-edit"></i> Publier un article</h2>        
+    </div>
+    {% endif %}
+
+    <div class="form-content">   
+        <div>
+            <p>Titre de l'article :</p>
+            {{ form_errors(formArticle.title) }}
+            {{ form_widget(formArticle.title) }}
+        </div>
+
+        <div class="description">
+            <p>Contenu de l'article : </p>
+            {{ form_errors(formArticle.content) }}
+            {{ form_widget(formArticle.content, {
+                }) }}
+        </div>
+        <div>
+            <p>Lien utile:</p>
+            {{ form_errors(formArticle.link) }}
+            {{ form_widget(formArticle.link) }}
+        </div>
+
+        <div>
+            <p>Image de l'article  </p>
+            {{ form_errors(formArticle.image1) }}
+            {{ form_widget(formArticle.image1)}}
+        </div>         
+        <div>
+            <p>Image de l'article 2 </p>
+            {{ form_errors(formArticle.image2) }}
+            {{ form_widget(formArticle.image2)}}
+        </div>         
+
+        <div>
+            <p>Image de l'article 3 </p>
+            {{ form_errors(formArticle.image3) }}
+            {{ form_widget(formArticle.image3)}}
+        </div>   
+        <div>
+            <p>Image de l'article 4 </p>
+            {{ form_errors(formArticle.image4) }}
+            {{ form_widget(formArticle.image4)}}
+        </div>   
+        <p>Technos</p>
+        <div class = "form-list">
+            {{ form_widget(formArticle.technologies)}}
+        </div>  
+        <p>Hashtags</p>
+        <div class = "form-list">
+            {{ form_widget(formArticle.hashtags)}}
+        </div>  
+
+        <div class ="button-center">
+            {{ form_widget(formArticle.envoyer, {
+                'label': 'Envoyer',
+                'attr': {
+                    'type': 'submit'
+                }
+            }) }}
+        </div>
+    </div>
+    
+{{ form_end(formArticle) }}
+</div>
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}
+

@@ -17,7 +17,8 @@
         {# FontAwesome #}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 
-        
+      
+       
         {# Favicon  #}
         <link rel="shortcut icon" type="image/png" href="{{ asset('images/mariefavicon.png') }}">
 
@@ -26,13 +27,18 @@
     <body>
 
         {# Bouton Scroll to top  #}
-        <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><img class="arrow-top" src="{{ asset('images/arrow.png') }}" alt=""></button>
+        <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><img class="arrow-top" src="{{ asset('images/boutons/arrow.png') }}" alt=""></button>
 
         {% block body %}{% endblock %}
 
         {% block javascripts %}
+        
+        {#JQUERY#} 
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        
         {# Javascript #}
         <script src="{{ asset('js/app.js') }}"></script>
+
 
         {% endblock %}
     </body>

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un compte{% endblock %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+{{ form(formUser) }}
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

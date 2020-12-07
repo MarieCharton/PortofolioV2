@@ -1,0 +1,33 @@
+.formulaire{
+    width: 60%;
+    margin:auto;
+}
+
+/* Textarea ajout article  */
+#article_content{
+    width: 100%;
+    height: 300px;
+}
+.form-list{
+    /* display: flex;
+    justify-content: center; */
+    font-size: 1.3em;
+}
+ 
+#article_technologies,#article_hashtags{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#article_technologies input,#article_hashtags input{
+    margin-right: -20px;   
+}
+
+.button-center{
+    text-align: center;
+}
+#article_envoyer{
+    padding: 20px;
+    font-size: 1.3em;
+    margin: 20px;
+}

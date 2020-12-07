@@ -26,7 +26,7 @@
     width: 90%;
     margin: auto;
 }
-input,textarea{
+input, .contact-textarea{
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@ input,textarea{
     font-size: 1.2em;
     border: 3px solid #ec7106;
 }
-textarea{
+.contact-textarea{
     height: 150px;
 }
 /*SUBMIT BUTTON*/

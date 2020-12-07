@@ -26,6 +26,12 @@
     background-color: white;
     margin: 20px;
 }
+.card-title{
+    text-align: center;
+    color: #2d0a58;
+    margin:4px;
+    font-size: 1.8em;
+}
 .crop-image{
     height: 80%;
     overflow: hidden;
@@ -44,6 +50,10 @@
     opacity: 0.50;
     -webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
+}
+.card-name a{
+    text-decoration: none;
+    color: black;
 }
 
 .card:hover .card-name {
@@ -69,6 +79,9 @@
         background-color:  #ea8342;
         opacity: 0.80;
     }
+    .card-title{
+        font-size: 1.5em;
+    }
 }
 
 /*=====MOBILE=====*/
@@ -90,6 +103,9 @@
         width: 80%;
         margin: auto;
         margin-top: 30px;
+    }
+    .card-title{
+        font-size: 1.2em;
     }
     .card-name {
         background-color:  #ea8342;

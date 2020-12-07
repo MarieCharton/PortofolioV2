@@ -5,28 +5,29 @@
         </div>
     </div>
 
-    <div class="portofolio-background"></div>
+    <div class="training-background"></div>
 
-    <div class="cards">
-        <div class="card">
-            <div class="crop-image">
-                <a href=""><img src="{{ asset('images/training/cssbattle1.png') }}
-                "></a>
-            </div> 
-            <div class="card-name">
-                <p>CSS BATTLE</p>
-                <p> Target #1 - Simply Square</p>
-               
+    <div class="training-container">
+        <div class="cards">
+        {% for exercice in exercices %}
+            <div class="card">
+                <div class="crop-image">
+                    <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}"><img src="{{ asset('images/training/image-target/'~ exercice.target) }}"></a>
+                </div> 
+                <div class="card-name">
+                    <a href="{{ path('solo-exercice', {slug: exercice.slug}) }}">
+                        <p> CSS BATTLE</p>
+                        <p>{{exercice.name}}</p>
+                    </a>
+                </div>
             </div>
+        {% endfor %}
         </div>
-        <div class="card">
-            <div class="crop-image">
-                <a href=""><img src="{{ asset('images/training/frontendmentor1.png') }}"></a>
-            </div>
-            <div class="card-name">
-                <p>FRONT-END-MENTOR</p>
-                <p>-FAQ Accordeon</p>
-            </div>
+        <div class="category-menu">
+            <img class = "category-button"src="{{ asset('images/boutons/platform.png') }}" alt="">
+            {% for platform in platforms %} 
+            <p>{{platform.name|capitalize}}</p>
+            {% endfor %}    
         </div>
     </div>
 </div>

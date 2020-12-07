@@ -25,6 +25,10 @@ orange : #ec7106;
 @import "pages/training.css";
 @import "pages/blog.css";
 @import "pages/contact.css";
+@import "pages/solo-project.css";
+@import "pages/solo-exercice.css";
+@import "pages/form.css";
+@import "pages/admin.css";
 
 @import "responsive.css";
 
