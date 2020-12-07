@@ -11,23 +11,24 @@
     text-align: center;
 }
 .exercice-description{
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 .image-exercice img{
-    border: 2px solid #2d0a58;
     width: 20%;
 }
 
 .preview-and-score{
     display: flex;
+    border: 2px solid #2d0a58;
 }
 .exercice-card{
     width: 50%;
+    margin: auto;
 
 }
 .exercice-card img{
-    width: 80%;
+    width: 100%;
 }
 .exercice-card p, .code p{
     font-size: 2em;
@@ -38,13 +39,16 @@
 }
 
 .image-code img{
-    width: 50%;
+    width: 75%;
 }
 
 
 /*=====TABLETTE=====*/
 @media (min-width: 600px) and (max-width: 1024px) {
 
+    .image-code img{
+        width: 100%;
+    }
 }
 
 /*=====MOBILE=====*/
@@ -52,6 +56,7 @@
 
     .preview-and-score{
         display: inline;
+        border: none;
     }
     .exercice-card{
         width: 100%;
