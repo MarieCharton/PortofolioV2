@@ -72,12 +72,13 @@
 
     .project-preview-image{
         width: 100%;
+        height: auto;
     }
     .project-preview{
         display: block;
     }
     .project-button img{
-        width: 60%;
+        width: 90%;
     }
 }
 

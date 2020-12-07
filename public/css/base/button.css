@@ -134,14 +134,13 @@
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
 
-/*TECHNOLOGIES BUTTON*/
-/* .technology-button{
-    width: 10%;
-    } */
 .wrapper-technology-button{
-    /* background-color: yellow; */
     flex-direction: column;
     align-items: center;
+}
+/*TECHNOLOGIES BUTTON*/
+.technology-button{
+    width: 20%;
 }
 
 }
