@@ -34,4 +34,7 @@
         background-size: 70%;
         height: 180px;
     }
+    .training-container .cards{
+        width: 100%;
+    }
 }
