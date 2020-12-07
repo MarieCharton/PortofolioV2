@@ -223,5 +223,7 @@
     }
     .article-content{
         width: 80%;
+        font-size: 1em;
     }
+
 }
