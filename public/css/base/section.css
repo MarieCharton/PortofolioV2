@@ -63,7 +63,7 @@
 @media (min-width: 0px) and (max-width: 599px) {
     /* IMAGE BANNER  */
 .intro-image{
-    width: 70%;
+    width: 50%;
     margin-top: 30px;
 }
 }
@@ -72,7 +72,7 @@
 @media (min-width: 600px) and (max-width: 1024px) {
     /* IMAGE BANNER  */
     .intro-image{
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
 }
 }
