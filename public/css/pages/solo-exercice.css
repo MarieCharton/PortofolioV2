@@ -9,6 +9,7 @@
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
+    font-size: 1.2em;
 }
 
 .image-exercice img{
@@ -59,8 +60,14 @@
     .exercice-card p,.code p {
         font-size: 1.3em;
     }
+    .image-code{
+        width: 90% ;
+    }
     .image-code img{
         width: 100%;
+    }
+    .image-exercice img{
+        width: 40%;
     }
 }
 
