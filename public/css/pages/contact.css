@@ -82,16 +82,14 @@ input, .contact-textarea{
     .form-contact{
         width: 90%;
     }
-    input,textarea{
+    input, .contact-textarea{
         width: 90%;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 15px;
         font-size: 1em;
     }
-    textarea{
-        height: 100px;
-    }
+
     /*SUBMIT BUTTON*/
 
     .submit-button{
@@ -117,15 +115,12 @@ input, .contact-textarea{
     .form-contact{
         width: 90%;
     }
-    input,textarea{
+    input, .contact-textarea{
         width: 90%;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 15px;
         font-size: 1em;
-    }
-    textarea{
-        height: 80px;
     }
     /*SUBMIT BUTTON*/
 
