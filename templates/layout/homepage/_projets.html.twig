@@ -1,33 +1,36 @@
 <div class="banner-project">
-    <img class= "intro-image"src="{{ asset('images/banniere/project.png') }}" alt="">
+    <img class= "intro-image"src="{{ asset('images/banniere/project2.png') }}" alt="">
+</div> 
+<div class="button-all ">
+    <a href="{{ path ('portofolio')}}">Voir tous les projets</a>
 </div>
-<div class="section orange">
-    <h2 class ="section-title">Mes derniers projets</h2>
-    <div class="last-three">
-        <div class="box orange-box">
-            <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/' ~ project1.image1 ) }}" alt="">
-            </div>
-            <h3>{{project1.name}}</h3>
-            <a href="{{ path('solo-project', {slug: project1.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
-        </div>
-        <div class="box orange-box">
-            <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/' ~ project2.image1 ) }}" alt="">
-            </div>
-            <h3>{{project2.name}}</h3>
-            <a href="{{ path('solo-project', {slug: project2.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
-        </div>
-            <div class="box orange-box">
-            <div class="image-box">
-                <img class= "picture"src="{{ asset('images/projets/' ~ project3.image1 ) }}" alt="">
-            </div>
-            <h3>{{project3.name}}</h3>
-            <a href="{{ path('solo-project', {slug: project3.slug}) }}"><button class = " button-round violet-button">Voir le projet</button></a>
-        </div>
+<div class="base-banner orange">
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
+    </div>
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project2.slug}) }}"><span>{{project1.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project2.image1 ) }}">	</a>
+    </div>
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project3.slug}) }}"><span>{{project1.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project3.image1 ) }}">	</a>
+    </div>
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
+    </div>
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
     </div>
 </div>
-<div class="see-all">
-    <a href="{{ path ('portofolio')}}"><button class = " button-round see-all-button see-all-button-orange"><i class="far fa-eye"></i> Voir tous les projets</button></a>
-</div>
+
+
+
+
+
+
+
 

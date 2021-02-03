@@ -11,11 +11,15 @@
     background-color: rgb(226, 221, 221);
 }
 .cv{
-    border: 3px solid #ec7106;
+    margin-top: 10px;
+    border: 1px solid #ec7106;
     width: 50%;
 }
 
 .cv-picture{
+    text-align: center;
+}
+.download-button{
     text-align: center;
 }
 

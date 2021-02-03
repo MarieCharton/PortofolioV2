@@ -12,6 +12,7 @@ orange : #ec7106;
 
 
 /*HOMEPAGE*/
+@import "homepage/base-section.css";
 @import "homepage/techno-section.css";
 @import "homepage/project-section.css";
 @import "homepage/training-section.css";
@@ -38,6 +39,7 @@ orange : #ec7106;
 
 body{
     margin: 0;
+    box-sizing: border-box;
 }
 button{
     font-family: 'Quicksand', sans-serif;

@@ -26,11 +26,15 @@ class MainController extends AbstractController
         $project1 = $projectRepository->find(1);
         $project2 = $projectRepository->find(2);
         $project3 = $projectRepository->find(3);
+        $project4 = $projectRepository->find(4);
+        $project5 = $projectRepository->find(5);
         
         return $this->render('homepage.html.twig',[
             "project1" => $project1,
             "project2" => $project2,
             "project3" => $project3,
+            "project4" => $project4,
+            "project5" => $project5,
             "lastExercices" => $lastExercices,
             "lastArticles" => $lastArticles
 

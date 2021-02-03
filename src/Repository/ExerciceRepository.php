@@ -42,7 +42,7 @@ class ExerciceRepository extends ServiceEntityRepository
             FROM App\Entity\Exercice exercice
             ORDER BY exercice.createdAt DESC
             ")
-            ->setMaxResults(3);
+            ->setMaxResults(5);
     
             return $query->getResult();
         }

@@ -40,7 +40,7 @@ class ArticleRepository extends ServiceEntityRepository
             FROM App\Entity\Article article
             ORDER BY article.createdAt DESC
             ")
-            ->setMaxResults(3);
+            ->setMaxResults(5);
     
             return $query->getResult();
         }
