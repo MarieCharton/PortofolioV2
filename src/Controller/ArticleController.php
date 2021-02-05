@@ -43,7 +43,7 @@ class ArticleController extends AbstractController
         $article_hashtags =$article->getHashtags();
 
         return $this->render(
-            'blog.html.twig',[
+            'solo-article.html.twig',[
                 "hashtags" => $hashtags,
                 "technologies" => $technologies,
                 "article" => $article,

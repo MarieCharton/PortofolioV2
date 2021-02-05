@@ -1,5 +1,6 @@
 .wrapper-page{
-    background-color: rgb(226, 221, 221);
+    /* background-color: rgb(226, 221, 221);
+    background-color: red; */
 }
 .page-title{
     text-align: center;
@@ -15,6 +16,7 @@
     margin: 0;
 }
 .cards{
+    background: linear-gradient(#2d0a58,#ec7106);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

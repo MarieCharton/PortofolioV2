@@ -1,21 +1,14 @@
 <div class="banner-project">
-    <img class= "intro-image"src="{{ asset('images/banniere/blog.png') }}" alt="">
+    <img class= "intro-image"src="{{ asset('images/banniere/blog2.png') }}" alt="">
 </div>
-<div class="section orange">
-    <h2 class ="section-title">Mes derniers articles</h2>
-    <div class="last-three">
-        {% for lastArticle in lastArticles %}
-        <div class="box orange-box">
-            <div class="image-box">
-                <img class= "picture"src="{{ asset('uploads/' ~ lastArticle.image1 ) }}" alt="{{lastArticle.title}}">
-            </div>
-            <h3>{{lastArticle.title|capitalize}}</h3>
-            <a href="{{ path('article', {slug: lastArticle.slug}) }}"><button class = " button-round violet-button">Voir l'article</button></a>
-        </div>
-        {% endfor %}
+<div class="button-all violet-all">
+    <a href="{{ path ('blog')}}">Voir tous les articles</a>
+</div>
+<div class="base-banner orange">
+    {% for lastArticle in lastArticles %}
+    <div class="cadre"> 
+        <a href="{{ path('article', {slug: lastArticle.slug}) }}"><span>{{lastArticle.title|capitalize}}</span>
+        <img src="{{ asset('uploads/' ~ lastArticle.image1 ) }}">	</a>
     </div>
+    {% endfor %}
 </div>
-<div class="see-all">
-    <a href="{{ path ('blog')}}"><button class = " button-round see-all-button see-all-button-orange"><i class="far fa-eye"></i> Voir tous les articles</button></a>
-</div>
-

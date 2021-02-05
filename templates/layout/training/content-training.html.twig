@@ -1,15 +1,4 @@
-<div class="wrapper-page">
-    <div class="box-title">
-        <div class="page-title">
-            {% if app.request.get('_route') == 'training' %}   
-            <h1><i class="fas fa-pencil-alt"></i> Exercices</h1>
-            {% endif %}
-            {% if app.request.get('_route') == 'exercice_by_plaform' %}   
-            <h1>{{platform.name|capitalize}}</h1>
-            {% endif %}
-        </div>
-    </div>
-
+{# <div class="wrapper-page">
     <div class="training-background"></div>
 
     <div class="training-container">
@@ -26,9 +15,9 @@
                         <p>{{exercice.name}}</p>
                     </a>
                 </div>
-            </div>
+            </div> #}
         {# {{ knp_pagination_render(articles) }} #}
-        {% endfor %}
+        {# {% endfor %}
         {% endif %}
         {% if app.request.get('_route') == 'exercice_by_plaform' %}   
         {% for exerciceByPlatform in exercicesByPlatform %}
@@ -46,13 +35,54 @@
         {{ knp_pagination_render(exercicesByPlatform) }}
         {% endfor %}
         {% endif %}
-     
         </div>
-        <div class="category-menu">
+
+    </div>
+</div> #}
+
+{# Partie commune a toutes les pages  #}
+<div class="wrapper-page">
+
+    <div class="training-background"></div>
+    {# Fin Partie commune a toutes les pages  #}
+
+    <div class="article-page-container">
+        <div class="cubes">
+
+        {# Route Training  #}
+            {% if app.request.get('_route') == 'training' %} 
+            {% for exercice in exercices %}
+            <div class="solo-cube">
+                <a href="{{ path('exercice', {slug: exercice.slug}) }}">
+                <img class= "image-cube"src="{{ asset('uploads/'~ exercice.target) }}" alt="image de l'exercice">
+                <span>{{exercice.name}}</span>
+                </a>
+            </div> 
+            {% endfor %}
+            {% endif %}
+     {# {{ knp_pagination_render(articles) }} #}
+
+
+
+        {# Route Article par Catégories #}
+            {% if app.request.get('_route') == 'exercice_by_plaform' %}  
+            {% for exerciceByPlatform in exercicesByPlatform %}
+            <div class="solo-cube">
+                <a href="{{ path('exercice', {slug: exerciceByPlatform.slug}) }}">
+                <img class= "image-cube"src="{{ asset('uploads/'~ exerciceByPlatform.target) }}" alt="image de l'exercice">
+                <span>{{exerciceByPlatform.name}}</span>
+                </a>
+            </div> 
+            {% endfor %}
+            {% endif %}
+
+        {# Partie commune a toutes les pages  #}
+        <div class="banner-categories-technologies">
             <img class = "category-button"src="{{ asset('images/boutons/platform.png') }}" alt="">
             {% for platform in platforms %} 
             <a href="{{ path('exercice_by_plaform', {id: platform.id}) }}"><p>{{platform.name|capitalize}}</p></a>
-            {% endfor %}    
+            {% endfor %}
         </div>
     </div>
 </div>
+{# FinPartie commune a toutes les pages  #}

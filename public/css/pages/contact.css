@@ -3,13 +3,13 @@
     background-image: url("../../images/background/contact.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 48%;
-    height: 63vh;
-    background-color: rgb(226, 221, 221);
+    background-size: 35%;
+    height: 40vh;
     border-bottom: 5px solid #ea8342;
 }
 .wrapper-form{
-    background-color: #2d0a58;
+    /* background-color: #2d0a58; */
+    background: linear-gradient(#2d0a58,#ec7106);
     width: 60%;
     margin: auto;
     display: flex;

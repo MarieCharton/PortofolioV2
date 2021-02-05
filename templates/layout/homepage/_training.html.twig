@@ -1,5 +1,5 @@
-<div class="banner-training">
-    <img class= "intro-image"src="{{ asset('images/banniere/training.png') }}" alt="">
+{# <div class="banner-training">
+    <img class= "intro-image"src="{{ asset('images/banniere/training2.png') }}" alt="">
 </div>
 <div class="section violet">
     <h2 class ="section-title">Mes derniers exercices</h2>
@@ -17,4 +17,21 @@
 </div>
 <div class="see-all">
     <a href="{{ path ('training')}}"><button class = " button-round see-all-button see-all-button-violet"><i class="far fa-eye"></i> Voir tous les exercices</button></a>
+</div> #}
+
+
+
+<div class="banner-training">
+    <img class= "intro-image"src="{{ asset('images/banniere/training2.png') }}" alt="">
+</div>
+<div class="button-all orange-all">
+    <a href="{{ path ('training')}}">Voir tous les exercices</a>
+</div>
+<div class="base-banner violet">
+    {% for lastExercice in lastExercices %}
+    <div class="cadre"> 
+        <a href="{{ path('exercice', {slug: lastExercice.slug}) }}"><span>{{lastExercice.name|capitalize}}</span>
+        <img class = "exercice-image-homepage"src="{{ asset('uploads/' ~ lastExercice.target) }}">	</a>
+    </div>
+    {% endfor %}
 </div>

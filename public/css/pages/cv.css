@@ -8,7 +8,8 @@
 }
 
 .wrapper-cv{
-    background-color: rgb(226, 221, 221);
+    /* background-color: rgb(226, 221, 221); */
+    background: linear-gradient(#2d0a58,#ec7106);
 }
 .cv{
     margin-top: 10px;

@@ -2,9 +2,8 @@
     background-image: url("../../images/background/portofolio.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 48%;
-    height: 63vh;
-    background-color: rgb(226, 221, 221);
+    background-size: 30%;
+    height: 40vh;
     border-bottom: 5px solid #ea8342;
 }
 
@@ -23,3 +22,4 @@
         height: 180px;
     }
 }
+

@@ -65,27 +65,6 @@
         font-size: 23px;
     }
 
-
-    /*Social*/
-    .social-wrapper {
-        width: 100%;
-        display: inline;
-    }
-    .social-box{
-        border-radius: 20px 20px 0 0;
-        width: 75%;
-        margin:auto;
-    }
-    .banner-social{
-        width: 70%;
-        margin: -84px auto -25px auto;
-    }
-    .social-image-box{
-        width: 60%;
-    }
-    .social-wrapper p{
-        font-size: 11px;
-    }
     /*Section de base*/
     .section{
         width: 100%;       
@@ -177,8 +156,6 @@
         width: 90%;
     }
 
-    
-
     .image-box{
         height:80px;
     }
@@ -194,12 +171,7 @@
         margin-top: -4px;
         border-radius: 10px 10px 10px 10px;
     }
-    .social-wrapper .fas {
-        display: none;
-    }
-    .social-image-box {
-        width: 50%;
-    }
+
     .section h3{
         font-size: 0.8em;
     }
