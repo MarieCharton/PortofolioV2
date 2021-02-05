@@ -5,26 +5,12 @@
     <a href="{{ path ('portofolio')}}">Voir tous les projets</a>
 </div>
 <div class="base-banner orange">
+    {% for project in projects %}
     <div class="cadre"> 
-        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
+        <a href="{{ path('solo-project', {slug: project.slug}) }}"><span>{{project.name}}</span>
+        <img src="{{ asset('images/projets/' ~ project.image1 ) }}">	</a>
     </div>
-    <div class="cadre"> 
-        <a href="{{ path('solo-project', {slug: project2.slug}) }}"><span>{{project1.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project2.image1 ) }}">	</a>
-    </div>
-    <div class="cadre"> 
-        <a href="{{ path('solo-project', {slug: project3.slug}) }}"><span>{{project1.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project3.image1 ) }}">	</a>
-    </div>
-    <div class="cadre"> 
-        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
-    </div>
-    <div class="cadre"> 
-        <a href="{{ path('solo-project', {slug: project1.slug}) }}"><span>{{project1.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project1.image1 ) }}">	</a>
-    </div>
+    {% endfor %}
 </div>
 
 

@@ -80,6 +80,9 @@
     .project-button img{
         width: 90%;
     }
+    .technology-project{
+        display: none;
+    }
 }
 
 
