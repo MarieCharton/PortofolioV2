@@ -8,7 +8,7 @@
     {% for project in projects %}
     <div class="cadre"> 
         <a href="{{ path('solo-project', {slug: project.slug}) }}"><span>{{project.name}}</span>
-        <img src="{{ asset('images/projets/' ~ project.image1 ) }}">	</a>
+        <img class ="cadre-image"src="{{ asset('images/projets/' ~ project.image1 ) }}">	</a>
     </div>
     {% endfor %}
 </div>

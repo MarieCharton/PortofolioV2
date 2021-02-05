@@ -31,7 +31,7 @@
     {% for lastExercice in lastExercices %}
     <div class="cadre"> 
         <a href="{{ path('exercice', {slug: lastExercice.slug}) }}"><span>{{lastExercice.name|capitalize}}</span>
-        <img class = "exercice-image-homepage"src="{{ asset('uploads/' ~ lastExercice.target) }}">	</a>
+        <img class = " cadre-image"src="{{ asset('uploads/' ~ lastExercice.target) }}">	</a>
     </div>
     {% endfor %}
 </div>

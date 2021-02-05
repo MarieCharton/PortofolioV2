@@ -8,7 +8,7 @@
     {% for lastArticle in lastArticles %}
     <div class="cadre"> 
         <a href="{{ path('article', {slug: lastArticle.slug}) }}"><span>{{lastArticle.title|capitalize}}</span>
-        <img src="{{ asset('uploads/' ~ lastArticle.image1 ) }}">	</a>
+        <img class ="cadre-image"src="{{ asset('uploads/' ~ lastArticle.image1 ) }}">	</a>
     </div>
-    {% endfor %}
+    {% endfor %} 
 </div>
