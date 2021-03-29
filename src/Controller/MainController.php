@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
+use ReCaptcha\ReCaptcha;
+use Symfony\Component\Mime\Email;
 use App\Repository\ArticleRepository;
-use App\Repository\ExerciceRepository;
 use App\Repository\HashtagRepository;
-use App\Repository\PlatformRepository;
 use App\Repository\ProjectRepository;
+use App\Repository\ExerciceRepository;
+use App\Repository\PlatformRepository;
 use App\Repository\TechnologyRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
@@ -103,6 +104,50 @@ class MainController extends AbstractController
     public function contactPage(MailerInterface $mailer)
     {
 
+        // Gestion du Recaptcha GOOGle
+
+
+        // Secret key
+        $captcha = "6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv";
+
+        if(isset($_POST['g-recaptcha-response']))
+          $captcha=$_POST['g-recaptcha-response'];
+
+        if(!$captcha){
+          echo '<h2>Please check the the captcha form.</h2>';
+          exit;
+        }
+        $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+        if($response['success'] == false)
+        {
+          echo '<h2>You are spammer ! Get the @$%K out</h2>';
+        }
+        else
+        {
+            $this->addFlash('success', "Votre message a bien été envoyé ! ");
+
+        }
+        
+        // // empty response
+        // $response = null;
+        
+        // // check secret key
+        // $reCaptcha = new ReCaptcha($secret);
+        // // if submitted check response
+        // if ($_POST["g-recaptcha-response"]) {
+        //     $response = $reCaptcha->verifyResponse(
+        //         $_SERVER["REMOTE_ADDR"],
+        //         $_POST["g-recaptcha-response"]
+        //     );
+        // }
+
+
+
+
+
+
+
+
         if(isset($_POST) && isset($_POST['submit'])) {
  
             $email = (new Email())
@@ -116,7 +161,7 @@ class MainController extends AbstractController
                 );                
             $mailer->send($email);
             
-            $this->addFlash('success', "Votre message a bien été envoyé ! ");
+            // $this->addFlash('success', "Votre message a bien été envoyé ! ");
             
             return $this->redirectToRoute('contact');
             
