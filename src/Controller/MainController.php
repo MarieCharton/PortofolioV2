@@ -90,6 +90,14 @@ class MainController extends AbstractController
     }
 
     /**
+     * @Route("/about-me", name="about-me")
+     */
+    public function aboutMe(): Response
+    {
+        return $this->render('about-me.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contactPage(MailerInterface $mailer)
