@@ -115,6 +115,7 @@ class MainController extends AbstractController
 
         if(!$captcha){
             $this->addFlash('error', "Veuillez cliquer sur la case 'Je ne suis pas un robot ! ");
+            exit;
         }
         $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
         if($response['success'] == true)
