@@ -104,24 +104,6 @@ class MainController extends AbstractController
     public function contactPage(MailerInterface $mailer)
     {
 
-        // Gestion du Recaptcha GOOGle
-
-
-        // Secret key
-        $captcha = "6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv";
-
-        if(isset($_POST['g-recaptcha-response']))
-          $captcha=$_POST['g-recaptcha-response'];
-
-        if(!$captcha){
-            $this->addFlash('error', "Veuillez cliquer sur la case 'Je ne suis pas un robot ! ");
-            exit;
-        }
-        $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
-        if($response['success'] == true)
-        {
-            $this->addFlash('success', "Votre message a bien été envoyé ! ");
-        }
 
         if(isset($_POST) && isset($_POST['submit'])) {
  
@@ -134,7 +116,26 @@ class MainController extends AbstractController
                 "<p><strong> Contenu du message : </strong> " . $_POST['message']. "</p>
                 <p> Adresse mail de l'expediteur : " . $_POST['email'] . "</p>"
                 );                
+
+
+        // Gestion du Recaptcha GOOGLE
+        // Secret key
+        $captcha = "6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv";
+
+        if(isset($_POST['g-recaptcha-response']))
+          $captcha=$_POST['g-recaptcha-response'];
+
+        if(!$captcha){
+            $this->addFlash('error', "Veuillez cliquer sur la case 'Je ne suis pas un robot ! ");
+        }
+        $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+        if($response['success'] == true)
+        {
+            $this->addFlash('success', "Votre message a bien été envoyé ! ");
+            
             $mailer->send($email);
+        }
+
             
             // $this->addFlash('success', "Votre message a bien été envoyé ! ");
             
