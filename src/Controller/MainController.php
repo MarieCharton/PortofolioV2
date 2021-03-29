@@ -114,39 +114,13 @@ class MainController extends AbstractController
           $captcha=$_POST['g-recaptcha-response'];
 
         if(!$captcha){
-          echo '<h2>Please check the the captcha form.</h2>';
-          exit;
+            $this->addFlash('error', "Veuillez cliquer sur la case 'Je ne suis pas un robot ! ");
         }
         $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LekypMaAAAAAHwl6yyrvx43TkjJLcPFnQw2EWNv&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
-        if($response['success'] == false)
+        if($response['success'] == true)
         {
-            
+            $this->addFlash('error', "Votre message a bien été envoyé ! ");
         }
-        else
-        {
-            $this->addFlash('success', "Votre message a bien été envoyé ! ");
-
-        }
-        
-        // // empty response
-        // $response = null;
-        
-        // // check secret key
-        // $reCaptcha = new ReCaptcha($secret);
-        // // if submitted check response
-        // if ($_POST["g-recaptcha-response"]) {
-        //     $response = $reCaptcha->verifyResponse(
-        //         $_SERVER["REMOTE_ADDR"],
-        //         $_POST["g-recaptcha-response"]
-        //     );
-        // }
-
-
-
-
-
-
-
 
         if(isset($_POST) && isset($_POST['submit'])) {
  
