@@ -14,27 +14,31 @@
     height: 100vh;
 }
 .cubes {
+    /* background-color: blue; */
      display: flex;
      flex-wrap:wrap;
      /* justify-content: space-between; */
      width: 85%;
      margin-right: 15%;
      margin-top: 2em;
+     height: auto;
 
 }
 
 .solo-cube{
     overflow: hidden;
     width: 20%;
-    height: 300px;
+    height: 200px;
     transition: 0.6s;
     /* border: 2px solid black; */
     filter: grayscale(80%);
     filter: grayscale(80%)brightness(1.25);
+    background-color: white;
 }
 
 .image-cube{
-    width: 170%;
+    margin: auto;
+    width: 120%;
 }
 
 .solo-cube:hover {
@@ -116,7 +120,7 @@
     }
 
     .article-page-container{
-        height: 50vh;
+        height: auto;
     }
     .banner-categories-technologies{
       display: none;
