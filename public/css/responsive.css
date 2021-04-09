@@ -94,14 +94,6 @@
     .hashtag{
         display: none;
     }
-    /*SCROLL BUTTON*/
-    #scroll-to-top-button {
-        bottom: 30px;
-        right: -130px;
-    }
-    .arrow-top{
-        width: 15%;
-    }
 
     /*Footer*/
     .footer{

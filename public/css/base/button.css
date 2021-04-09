@@ -1,20 +1,17 @@
 /*SCROLL BUTTON*/
-#scroll-to-top-button {
-    display: none;
+.back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: -80px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-
+    bottom: 120px;
+    right: -170px;
+    display: none;
+    z-index: 2500;
 }
 .arrow-top{
     width: 30%;
 }
-
+.arrow-top:hover{
+    width: 32%;
+}
 /*BASIC BUTTON*/
 .button-round{
     border: none;
@@ -97,13 +94,22 @@
 /*=====MOBILE=====*/
 @media (min-width: 0px) and (max-width: 599px) {
 
-/* .wrapper-technology-button{
-    flex-direction: column;
-    align-items: center;
-} */
+/*SCROLL BUTTON*/
+.back-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: -230px;
+    display: none;
+    z-index: 2500;
+}
+.arrow-top{
+    width: 20%;
+}
 /*TECHNOLOGIES BUTTON*/
 .technology-button{
     width: 20%;
 }
 
 }
+
+
