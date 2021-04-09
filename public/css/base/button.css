@@ -105,6 +105,9 @@
 .arrow-top{
     width: 20%;
 }
+.arrow-top:hover{
+    width: 20%;
+}
 /*TECHNOLOGIES BUTTON*/
 .technology-button{
     width: 20%;
