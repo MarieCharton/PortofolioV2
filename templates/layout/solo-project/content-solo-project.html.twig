@@ -1,0 +1,71 @@
+<div class="wrapper-page">
+    <div class="box-title">
+        <div class="page-title">
+            <h1> {{project.name}}</h1>
+        </div>
+    {% include 'layout/_previous-page.html.twig' %}
+    </div>
+    <div class="container-project">
+        <div class="technology-project">
+            <h3>Technologies utilisées : </h3>
+            <div class="wrapper-technology-button">
+                {% for technology in technologies %}    
+                <img class ="technology-button" src="{{ asset('images/technologies/' ~ technology.name ~ '.png') }}" alt="">
+                {% endfor %} 
+
+            </div>
+        </div>
+        <h3>Présentation du projet : </h3>
+        <p>{{project.presentation|nl2br}}</p>
+        <h3>Deroulé du projet :</h3>   
+        {% if project.workinprogress == false %}
+        <p>{{project.progress|nl2br}}</p>
+        <div class="project-button">
+            <a href="{{project.link}}"><img src="{{ asset("images/boutons/visit.png")}}" alt=""></a>           
+            <a href="{{project.linkgithub}}"><img src="{{ asset("images/boutons/code.png")}}" alt=""></a>
+            {% if project.name == "Espoir sur pattes V1"  %}         
+            <a href="https://www.youtube.com/watch?v=Yfm2-PH8iTU&t=10620s#t=2h56m23s&ab_channel=O%27clock"><img src="{{ asset("images/boutons/video.png")}}" alt=""></a>
+            {% endif %}
+        </div>
+        <div class="project-preview">
+            <div class="project-preview-image">
+                <img src="{{ asset('images/projets/' ~ project.image1) }}" alt="" />     
+            </div>
+            <div class="project-preview-image">
+                <img src="{{ asset('images/projets/' ~ project.image2) }}" alt="" />     
+            </div>
+            <div class="project-preview-image">
+                <img src="{{ asset('images/projets/' ~ project.image3) }}" alt="" />     
+            </div>
+            <div class="project-preview-image">
+                <img src="{{ asset('images/projets/' ~ project.image4) }}" alt="" />     
+            </div>
+        </div>
+        {% endif %}
+        {% if project.workinprogress == true %}
+            <p> Le projet est en cours de développement <i class="far fa-smile-wink"></i></p>
+            <img src="{{ asset('images/coming-soon.png') }}" alt="" />     
+            <div class="project-preview">
+                <div class="project-preview-image">
+                    <img src="{{ asset('images/projets/' ~ project.image1) }}" alt="" />     
+                </div>
+            </div>
+        {% endif %}
+        {% if project.workinprogress == false %}
+            <h3>Informations techniques :</h3>   
+            <p>{{project.information|nl2br}}</p>
+        </div>
+        {# <div class="project-button">
+            <a href="{{project.link}}"><img src="{{ asset("images/boutons/visit.png")}}" alt=""></a>           
+            <a href="{{project.linkgithub}}"><img src="{{ asset("images/boutons/code.png")}}" alt=""></a>
+            {% if project.name == "Espoir sur pattes V1"  %}         
+            <a href="https://www.youtube.com/watch?v=Yfm2-PH8iTU&t=10620s#t=2h56m23s&ab_channel=O%27clock"><img src="{{ asset("images/boutons/video.png")}}" alt=""></a>
+            {% endif %}
+        </div> #}
+        {% endif %}
+    </div>
+
+</div>
+
+
+

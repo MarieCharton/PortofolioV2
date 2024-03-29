@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+<div class="wrapper-solo-article">
+
+    <div class="article-content">
+        <h1 class ="solo-article-title">{{ article.title}} </h1>
+        
+        <img  class ="solo-article-image"src="{{ asset('uploads/' ~ article.image1) }}" alt="">
+        <p>Pulié le {{ article.createdAt.date|date("d/m/Y") }} par Marie</p>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('update-article', {id: article.id}) }}"><button>Modifier</button></a>
+        <a href="{{ path('delete-article', {id: article.id}) }}"onclick="return confirm('Confirmez la suppression ?')"><button>Supprimer</button></a>
+        {% endif %} 
+        <div class="solo-article-text">
+            <p>{{ article.content|nl2br }} </p>
+        </div>
+    
+    </div>
+    <div class="article-infos">
+        <img class ="solo-article-logo"src="{{ asset('images/background/blog.png') }}" alt="">
+
+        <div class="hashtags-box">
+            <img class ="hashtag-article"src="{{ asset('images/hashtag.png') }}" alt="">
+            {% for article_hashtag in article_hashtags %}
+            <a href=""># {{article_hashtag.name|capitalize}}</a>
+            {% endfor %}
+            <div class="wrapper-technology-button">
+                {% for article_techno in article_technos %} 
+                <img class ="technology-button" src="{{ asset('images/technologies/' ~ article_techno.name ~ '.png') }}" alt="">
+                {% endfor %} 
+            </div>
+            
+        </div>
+        <div class="links-box">
+            <h2><i class="fas fa-link"></i> Liens utiles en rapport avec l'article</h2>
+            <nav>
+                <li><a href="{{article.link}}">{{article.link}}</a></li>
+            </nav>
+            {# <div class="secondary-images">
+                <img  class ="solo-article-image"src="{{ asset('uploads/' ~ article.image2) }}" alt="">
+                <img  class ="solo-article-image"src="{{ asset('uploads/' ~ article.image3) }}" alt="">
+                <img  class ="solo-article-image"src="{{ asset('uploads/' ~ article.image4) }}" alt="">
+            </div> #}
+
+            </div>
+        </div>
+    
+    
+    </div>
+
+
+</div>
+
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

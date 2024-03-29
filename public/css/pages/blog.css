@@ -1,0 +1,146 @@
+.blog-background{
+    background-image: url("../../images/background/blog.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 30%;
+    height: 40vh;
+    border-bottom: 5px solid #ea8342;
+}
+
+.article-page-container{
+    background: linear-gradient(#2d0a58,#ec7106);
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+.cubes {
+    /* background-color: blue; */
+     display: flex;
+     flex-wrap:wrap;
+     /* justify-content: space-between; */
+     width: 85%;
+     margin-right: 15%;
+     margin-top: 2em;
+     height: auto;
+
+}
+
+.solo-cube{
+    overflow: hidden;
+    width: 20%;
+    height: 200px;
+    transition: 0.6s;
+    /* border: 2px solid black; */
+    filter: grayscale(80%);
+    filter: grayscale(80%)brightness(1.25);
+    background-color: white;
+}
+
+.image-cube{
+    margin: auto;
+    width: 120%;
+}
+
+.solo-cube:hover {
+    filter: grayscale(0%);
+    transform: scale(0.95);
+    filter: blur(0px);
+    opacity: 1;
+    border-radius: 3px;
+}
+
+.solo-cube span {
+    text-align: center;
+    width: 50%;
+    border-radius: 5px;
+    display: block;
+    position: absolute;   /* positionnement hors flux */
+    left: 100%;          /* décalage à gauche toute */
+    padding: 0px;     /* un peu d'espace latéral */
+    color: #eee;          /* couleur du texte à ajuster suivant le besoin */
+    background: #2d0a58;     /* couleur du fond à ajuster suivant le besoin */
+    transition: all .5s;  /* la transition à appliquer */
+}
+
+.solo-cube:hover span {
+    left: 5em;    
+    top: 2em;
+}
+
+
+.banner-categories-technologies{
+    text-align: center;
+    width: 15%;
+    /* background-color: #2d0a58; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    border-left: 5px solid #ec7106;
+}
+.banner-categories-technologies a{
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+.banner-categories-technologies a:hover{
+    text-decoration: underline;
+
+}
+.category-button{
+    width: 30%;
+}
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    .blog-background {
+        background-size: 70%;
+        height: 180px;
+    }
+
+    .cubes {
+        width: 80%;
+        margin-top: 2em;
+   }
+   .solo-cube{
+    width: 50%;
+    height: 300px;
+    transition: none;
+    filter: grayscale(0%);
+}
+
+} 
+
+/*=====MOBILE=====*/
+ @media (min-width: 0px) and (max-width: 599px) {
+
+    .blog-background {
+        background-size: 70%;
+        height: 180px;
+    }
+
+    .article-page-container{
+        height: auto;
+    }
+    .banner-categories-technologies{
+      display: none;
+    }
+    .cubes {
+        width: 100%;
+        margin: 1em;
+        margin-top: 2em;
+        /* background-color: yellow; */
+   }
+   .solo-cube{
+
+    width: 50%;
+    height: 150px;
+    transition: none;
+    filter: grayscale(0%);
+
+    }
+
+}  
+
+
+

@@ -1,0 +1,16 @@
+.admin-button {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.admin-button button{
+    padding: 20px;
+    font-size: 2em;
+    margin: 20px;
+    background-color: #2d0a58;
+    color: #ec7106;
+    cursor: pointer;
+    width: 50%;
+}

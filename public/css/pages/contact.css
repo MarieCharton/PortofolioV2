@@ -1,0 +1,132 @@
+
+.contact-background{
+    background-image: url("../../images/background/contact.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 35%;
+    height: 40vh;
+    border-bottom: 5px solid #ea8342;
+}
+.wrapper-form{
+    /* background-color: #2d0a58; */
+    background: linear-gradient(#2d0a58,#ec7106);
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.intro{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+}
+.form-contact{
+    width: 90%;
+    margin: auto;
+}
+input, .contact-textarea{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    border: 3px solid #ec7106;
+}
+.contact-textarea{
+    height: 150px;
+}
+/*SUBMIT BUTTON*/
+.submit{
+    text-align: center;
+}
+.submit-button{
+    padding: 15px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    width: 20%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background:#ec7106 ;
+}
+
+/*FLASHMESSAGE*/
+.alert-success{
+    color:  #2d0a58;
+    background-color: #ec7106;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    .contact-background{
+        background-size: 60%;
+        height: 280px;
+    }
+    .wrapper-form{
+        width: 80%;
+    }
+    .intro{
+        color: white;
+        font-size: 1em;
+        padding: 6px;
+    }
+    .form-contact{
+        width: 90%;
+    }
+    input, .contact-textarea{
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    /*SUBMIT BUTTON*/
+
+    .submit-button{
+        padding: 15px;
+        font-size: 1.1em;
+        width: 30%;
+    }
+}
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+    .contact-background{
+        background-size: 70%;
+        height: 180px;
+    }
+    .wrapper-form{
+        width: 80%;
+    }
+    .intro{
+        font-size: 0.9em;
+        padding: 2px;
+    }
+    .form-contact{
+        width: 90%;
+    }
+    input, .contact-textarea{
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px;
+        font-size: 1em;
+    }
+    /*SUBMIT BUTTON*/
+
+    .submit-button{
+        padding: 10px;
+        font-size: 1em;
+        width: 40%;
+    }
+}

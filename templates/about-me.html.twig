@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+<div class="banner">
+    <div class="banner-div">
+        <img class = "img-banner" src="{{ asset('images/background/presentation.png') }}" alt="banniere">
+    </div>
+    <div class="banner-presentation">
+        <h1> Qui suis-je ? </h1>
+        <p class ="presentation" >{{ " Quoi de mieux que de connaître les goûts de quelqu'un pour en savoir plus sur cette personne ?
+        Ca tombe bien, j'aime beaucoup de choses dans la vie. 
+        J'ai toujours cette impression de n'avoir jamais assez de temps pour pour pouvoir faire tout ce que je veux. Voir, lire, écouter, jouer, voyager, partager.
+        J'ai eu cette idée des tops car j'imagine qu'elle représente bien ce que je suis."|nl2br }}
+         </p>
+    </div>
+</div>
+
+<h2><i class="fas fa-book"></i> Livres</h2>
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

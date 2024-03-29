@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+<div class="cv-background">
+{#     <div class="box-title">
+        <div class="page-title">
+            <h1><i class="fas fa-user"></i> Mon Cv</h1>
+        </div>
+    </div> #}
+{#     <img src="{{ asset('images/background/cv2.png') }}" alt="dessin-cv"> #}
+</div>
+<div class="wrapper-cv">
+    <div class = "cv-picture">
+        <img class = "cv"src="{{ asset('images/cv/CVMARIECHARTON2.jpg') }}"alt="cv de marie charton">
+    </div>
+    <div class="download-button">
+        <a href="{{ asset('images/cv/CVMARIECHARTON2.pdf') }}" download class = "download"><img src="{{ asset('images/boutons/download.png') }}" alt="dessin-cv"></a>
+    </div>
+</div>
+
+
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

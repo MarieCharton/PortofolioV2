@@ -1,0 +1,22 @@
+<div class="banner-project">
+    <img class= "intro-image"src="{{ asset('images/banniere/project2.png') }}" alt="">
+</div> 
+<div class="button-all violet-all">
+    <a href="{{ path ('portofolio')}}">Voir tous les projets</a>
+</div>
+<div class="base-banner orange">
+    {% for project in projects %}
+    <div class="cadre"> 
+        <a href="{{ path('solo-project', {slug: project.slug}) }}"><span>{{project.name}}</span>
+        <img class ="cadre-image"src="{{ asset('images/projets/' ~ project.image1 ) }}">	</a>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<div class="banner-project">
+    <img class= "intro-image"src="{{ asset('images/banniere/blog2.png') }}" alt="">
+</div>
+<div class="button-all violet-all">
+    <a href="{{ path ('blog')}}">Voir tous les articles</a>
+</div>
+<div class="base-banner orange">
+    {% for lastArticle in lastArticles %}
+    <div class="cadre"> 
+        <a href="{{ path('article', {slug: lastArticle.slug}) }}"><span>{{lastArticle.title|capitalize}}</span>
+        <img class ="cadre-image"src="{{ asset('uploads/' ~ lastArticle.image1 ) }}">	</a>
+    </div>
+    {% endfor %} 
+</div>

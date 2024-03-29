@@ -1,0 +1,25 @@
+.portofolio-background{
+    background-image: url("../../images/background/portofolio.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 30%;
+    height: 40vh;
+    border-bottom: 5px solid #ea8342;
+}
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    .portofolio-background{
+        background-size: 60%;
+        height: 300px;
+    }
+}
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+    .portofolio-background{
+        background-size: 70%;
+        height: 180px;
+    }
+}
+

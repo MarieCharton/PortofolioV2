@@ -1,0 +1,82 @@
+/* Charte graphique 
+violet: #2d0a58;
+orange : #ec7106;  
+*/
+
+
+/*BASE*/
+@import "base/header.css";
+@import "base/footer.css";
+@import "base/button.css";
+@import "base/section.css";
+
+
+/*HOMEPAGE*/
+@import "homepage/base-section.css";
+@import "homepage/techno-section.css";
+@import "homepage/project-section.css";
+@import "homepage/training-section.css";
+@import "homepage/social-section.css";
+
+
+/*PAGES*/
+@import "pages/base.css";
+@import "pages/cv.css";
+@import "pages/portofolio.css";
+@import "pages/training.css";
+@import "pages/blog.css";
+@import "pages/contact.css";
+@import "pages/solo-article.css";
+@import "pages/solo-project.css";
+@import "pages/solo-exercice.css";
+@import "pages/form.css";
+@import "pages/admin.css";
+
+@import "responsive.css";
+
+:root {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+button{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.mentions{
+    text-align: center;
+    font-size: 2em;
+}
+.previous-page{
+    /* background-color: blue; */
+    font-size: 1.4em;
+    margin-left: 10%;
+    text-decoration: none;
+}
+.previous-page a{
+    text-decoration: none;
+}
+.previous-page a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 599px) and (min-width: 0px){
+    .mentions {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+.training-background{
+    background-image: url("../../images/background/training.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 30%;
+    height: 40vh;
+    border-bottom: 5px solid #ea8342;
+}
+.training-container{
+
+    display: flex;
+}
+.training-container .cards{
+    width: 80%;
+}
+.training-container .category-menu{
+    width: 15%;
+    text-align: center;
+}
+
+/*=====TABLETTE=====*/
+@media (min-width: 600px) and (max-width: 1024px) {
+    .training-background{
+        background-size: 60%;
+        height: 300px;
+    }
+}
+
+/*=====MOBILE=====*/
+@media (min-width: 0px) and (max-width: 599px) {
+    .training-background{
+        background-size: 70%;
+        height: 180px;
+    }
+    .training-container .cards{
+        width: 100%;
+    }
+}

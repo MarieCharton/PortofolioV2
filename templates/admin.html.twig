@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include 'layout/_header.html.twig' %}
+
+<div class="admin-button">
+    <a href="{{ path ('create_article')}}"><button>Ajouter un article</button></a>
+    <a href="{{ path ('create_exercice')}}"><button>Ajouter un exercice</button></a>
+    <a href="{{ path ('create_account')}}"><button>Créer un compte</button></a>
+</div>
+
+{% include 'layout/_footer.html.twig' %}
+
+{% endblock %}

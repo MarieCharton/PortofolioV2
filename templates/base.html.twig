@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}Marie Charton{% endblock %}</title>
+        {% block stylesheets %}
+
+        <!--Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3D9M8CZYV"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S3D9M8CZYV');
+        </script>
+
+        {# CSS #}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+
+        {# Font #}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        {# FontAwesome #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+
+        {# Balise GOOGLE Analytics #}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ61WQBQKD"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DZ61WQBQKD');
+        </script>
+
+        {# Google recaptcha #}
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+       
+        {# Favicon  #}
+        <link rel="shortcut icon" type="image/png" href="{{ asset('images/mariefavicon.png') }}">
+
+        {% endblock %}
+    </head>
+    <body>
+
+        {# Bouton Scroll to top  #}
+        {# <button onclick="topFunction()" id="scroll-to-top-button" title="Haut de la page"><img class="arrow-top" src="{{ asset('images/boutons/arrow.png') }}" alt=""></button> #}
+
+        {# Scrol Top Button  #}
+        {# <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><img class="arrow-top" src="{{ asset('images/boutons/arrow.png') }}" alt=""></a> #}
+
+        {# Scrol Top Button  #}
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><img class="arrow-top" src="{{ asset('images/boutons/arrow.png') }}" alt=""></a>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+        
+        {#JQUERY#} 
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+        {# Javascript #}
+        <script src="{{ asset('js/app.js') }}"></script>
+
+
+        {% endblock %}
+    </body>
+</html>
